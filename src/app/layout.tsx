@@ -10,6 +10,9 @@ import {
 
 import { ThemeProvider } from "@/components/theme-provider";
 
+import Header from "../components/Header";
+import Footer from "@/components/Footer";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -46,7 +49,7 @@ const gowunDodum = Gowun_Dodum({
 
 export const metadata: Metadata = {
   title: "chel.dev",
-  description: "chelseaoktaviany's portofolio",
+  description: "chelseaoktaviany's personal portofolio",
 };
 
 export default function RootLayout({
@@ -67,7 +70,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="font-sans w-full min-h-screen">
+            <main
+              className="bg-radial from-[#e8e8e8] to-[#f4f4f5] to-100%
+                dark:from-[#151515] dark:to-[#050505] dark:to-100% flex flex-col
+                row-start-2 items-center md:items-center sm:items-start py-3"
+            >
+              <Header />
+              {children}
+              {/* <Footer /> */}
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
