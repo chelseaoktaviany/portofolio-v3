@@ -4,20 +4,17 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { prisma } from "@/db/prisma";
-import {
-  Skills,
-  Projects,
-  Educations,
-  Experiences,
-  Certifications,
-} from "@/types";
 
 export default async function Home() {
   // server component fetch
-  const projects = await prisma.projects.findMany({
-    take: 6,
-    orderBy: { id: "asc" },
-  });
+  const [skills, projects, educations, experiences, certifications] =
+    await Promise.all([
+      prisma.skills.findMany({ orderBy: { id: "asc" } }),
+      prisma.projects.findMany({ take: 3, orderBy: { id: "asc" } }),
+      prisma.educations.findMany({ orderBy: { id: "asc" } }),
+      prisma.experiences.findMany({ take: 3, orderBy: { startDate: "desc" } }),
+      prisma.certifications.findMany({ orderBy: { id: "asc" } }),
+    ]);
 
   return (
     <>
@@ -41,17 +38,24 @@ export default async function Home() {
       </section>
 
       {/* about section */}
-      <section className="w-full h-screen bg-[#050505]">
-        <div className="flex flex-col md:flex-row gap-10 justify-center my-5">
-          <div className="flex-1 px-18 py-5 mx-auto text-start">
+      <section
+        className="w-full h-screen flex items-center bg-[#050505]"
+        id="about"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full w-full">
+          {/* left content */}
+          <div
+            className="flex flex-col justify-center px-10 md:px-20 space-y-6
+              text-[#ebebeb]"
+          >
             <h1
-              className="text-[70px] font-bold my-8
+              className="lg:text-[70px] md:text-6xl font-bold
                 font-(family-name:--font-archivo-black)"
             >
               Hello,
             </h1>
             <p
-              className="text-2xl font-light
+              className="lg:text-2xl md:text-base leading-[40px] font-light
                 font(family-name:--font-pontano-sans)"
             >
               I am a fresh graduate in Computer Science with 1 year of
@@ -62,32 +66,44 @@ export default async function Home() {
               continuously learning new technologies. Feel free to look at my
               CV.
             </p>
-            {/* button for download cv */}
 
-            <Button
-              variant="ghost"
-              className="my-8 px-8 py-8 text-md border-1 border-[#ffffff]"
-            >
-              <Link href="#" className="uppercase">
+            <div className="flex space-x-5 justify-center md:justify-start">
+              {/* button for download cv */}
+              <Link
+                href="#"
+                className="w-[200px] inline-block my-8 px-3 py-5 rounded-md
+                  tracking-wider bg-[#ebebeb] hover:bg-[#18181b]
+                  hover:text-[#ebebeb] transition uppercase text-center
+                  text-[#121212]"
+              >
+                read more
+              </Link>
+
+              {/* button for download cv */}
+              <Link
+                href="#"
+                className="w-[200px] inline-block my-8 px-3 py-5 border-1
+                  border-[#ffffff] rounded-md tracking-wider
+                  hover:bg-[#ebebeb]/5 transition uppercase text-center"
+              >
                 download cv
               </Link>
-            </Button>
+            </div>
           </div>
-          <div className="flex-1 relative bottom-5 w-[600px] h-[600px] mx-auto">
+          {/* right content - image */}
+          <div className="relative hidden md:block">
             <Image
               src="/images/avatar.jpeg"
               alt="Chel's avatar"
               fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, 600px"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
       </section>
 
       {/* skills section */}
-      <section className="w-full h-screen bg-[#1e1e1e]">
+      <section className="w-full h-screen bg-[#1e1e1e]" id="skills">
         <div className="flex flex-col md:flex-row gap-10 justify-center my-5">
           <div className="flex-1 px-18 py-5 mx-auto text-center">
             <h1
@@ -97,6 +113,7 @@ export default async function Home() {
               What I do
             </h1>
           </div>
+          {/* skills list */}
         </div>
       </section>
     </>
