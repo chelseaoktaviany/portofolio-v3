@@ -74,7 +74,7 @@ export default function RootLayout({
             <main
               className="bg-radial from-[#e8e8e8] to-[#f4f4f5] to-100%
                 dark:from-[#151515] dark:to-[#050505] dark:to-100% flex flex-col
-                row-start-2 items-center md:items-center sm:items-start py-3"
+                row-start-2 items-center md:items-center sm:items-start"
             >
               <Header />
               {children}

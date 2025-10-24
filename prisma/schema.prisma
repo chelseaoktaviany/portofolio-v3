@@ -18,7 +18,6 @@ datasource db {
 model Skills {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   skillTitle String
-  imageURL String
   createdAt DateTime @default(now())
 }
 

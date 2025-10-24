@@ -6,12 +6,10 @@ import Skills from "@/components/section/Skills";
 
 export default async function Home() {
   // server component fetch
-  // const [skills, projects, educations, experiences, certifications] =
+  // const [skills, projects, certifications] =
   //   await Promise.all([
   //     prisma.skills.findMany({ orderBy: { id: "asc" } }),
   //     prisma.projects.findMany({ take: 3, orderBy: { id: "asc" } }),
-  //     prisma.educations.findMany({ orderBy: { id: "asc" } }),
-  //     prisma.experiences.findMany({ take: 3, orderBy: { startDate: "desc" } }),
   //     prisma.certifications.findMany({ orderBy: { id: "asc" } }),
   //   ]);
 
