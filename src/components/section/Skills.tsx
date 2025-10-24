@@ -16,7 +16,7 @@ const Skills = async () => {
         </h1>
       </div>
       {/* skills list */}
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl w-full"></div>
+      <div className="grid md:grid-cols-4 gap-10 max-w-6xl w-full"></div>
     </div>
   );
 };

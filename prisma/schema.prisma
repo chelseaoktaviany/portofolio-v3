@@ -14,14 +14,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// skill model
-model Skills {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  skillTitle String
-  imageURL String
-  createdAt DateTime @default(now())
-}
-
 // project model
 model Projects {
   id String @id @default(auto()) @map("_id") @db.ObjectId
@@ -32,16 +24,6 @@ model Projects {
   createdAt DateTime @default(now())
 }
 
-// education model
-model Educations {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  instituteName String
-  degreeName String
-  instituteLocation String
-  startDate DateTime
-  endDate DateTime?
-}
-
 // certification model
 model Certifications {
   id String @id @default(auto()) @map("_id") @db.ObjectId
@@ -49,15 +31,5 @@ model Certifications {
   issuer String
   certificationLink String
   dateIssued DateTime
-  createdAt DateTime @default(now())
-}
-
-// experiences model
-model Experiences {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
-  company String
-  startDate DateTime
-  endDate DateTime?
   createdAt DateTime @default(now())
 }
