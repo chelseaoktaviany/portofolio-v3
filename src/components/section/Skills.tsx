@@ -1,4 +1,4 @@
-// import { prisma } from "@/db/prisma";
+import Link from "next/link";
 
 // icons
 import HTML5 from "@/svg/html5-plain.svg";
@@ -10,12 +10,9 @@ import ReactJS from "@/svg/react-original.svg";
 import NodeJS from "@/svg/nodejs-plain.svg";
 import ReactNative from "@/svg/reactnative-original.svg";
 
-import { Button } from "@/components/ui/button";
 import SkillCard from "@/components/SkillCard";
 
 const Skills = async () => {
-  // const skills = await prisma.skills.findMany({ orderBy: { id: "asc" } });
-
   const skillLists = [
     {
       id: 1,
@@ -63,9 +60,9 @@ const Skills = async () => {
     <div className="flex flex-col justify-center items-center mt-20">
       <h1
         className="text-[70px] text-center md:text-center sm:text-center
-          font-bold mb-10 font-(family-name:--font-archivo-black)"
+          font-bold font-(family-name:--font-archivo-black) mb-10"
       >
-        What I do
+        Tools & Skills
       </h1>
       {/* skills list */}
       <div className="grid md:grid-cols-4 gap-10 max-w-6xl w-full">
@@ -80,12 +77,14 @@ const Skills = async () => {
 
       {/* more skills button */}
       <div className="py-8 my-10">
-        <Button
-          className="px-10 py-8 border border-[#ebebeb] uppercase"
-          variant="ghost"
+        <Link
+          className="px-10 py-6 rounded-sm bg-transparent border
+            border-[#ebebeb] hover:bg-[#ebebeb]/30 tracking-wider
+            transition-colors uppercase"
+          href="#"
         >
           More skills
-        </Button>
+        </Link>
       </div>
     </div>
   );
