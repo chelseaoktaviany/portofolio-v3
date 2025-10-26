@@ -3,6 +3,7 @@
 import Hero from "@/components/section/Hero";
 import AboutUs from "@/components/section/AboutUs";
 import Skills from "@/components/section/Skills";
+import Experiences from "@/components/section/Experiences";
 
 export default async function Home() {
   // server component fetch
@@ -38,6 +39,12 @@ export default async function Home() {
       </section>
 
       {/* experiences section  */}
+      <section
+        className="w-full h-screen flex justify-center items-center"
+        id="experiences"
+      >
+        <Experiences />
+      </section>
     </>
   );
 }
