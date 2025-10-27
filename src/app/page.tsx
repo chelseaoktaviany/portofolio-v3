@@ -31,8 +31,7 @@ export default async function Home() {
 
       {/* skills section */}
       <section
-        className="w-full h-screen flex justify-center items-center
-          bg-[#1e1e1e]"
+        className="w-full h-screen flex justify-center items-center"
         id="skills"
       >
         <Skills />
