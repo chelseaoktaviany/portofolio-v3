@@ -53,10 +53,10 @@ const AboutUs = () => {
       {/* right content - image */}
       <div className="relative hidden md:block">
         <Image
-          src="/images/avatar.jpeg"
+          className="w-full h-full object-cover brightness-70"
+          src="/images/avatar.jpg"
           alt="Chel's avatar"
           fill
-          className="w-full h-full object-cover"
         />
       </div>
     </div>

@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import ExperienceList from "@/components/ExperienceList";
 
-const Experiences = async () => {
+const Experiences = () => {
+  const [isOpenIndex, setIsOpenIndex] = useState<number | null>(0);
+
   const experiences = [
     {
       id: 1,
@@ -38,8 +43,8 @@ const Experiences = async () => {
     },
     {
       id: 3,
-      jobTitle: "Backend Developer Student Internship",
-      company: "COVID-19 Response Acceleration Task Force",
+      jobTitle: "Backend Developer Internship",
+      company: "COVID-19 RATF",
       location: "Jakarta, Indonesia",
       duration: "June 2020 - September 2020",
       techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -55,7 +60,7 @@ const Experiences = async () => {
         Work Experiences
       </div>
       {/* experience list */}
-      {experiences.map((item) => (
+      {experiences.map((item, index) => (
         <ExperienceList
           key={item.id}
           jobTitle={item.jobTitle}
@@ -63,6 +68,8 @@ const Experiences = async () => {
           location={item.location}
           duration={item.duration}
           techStack={item.techStack}
+          open={isOpenIndex === index}
+          onToggle={() => setIsOpenIndex(isOpenIndex === index ? null : index)}
         />
       ))}
     </div>
