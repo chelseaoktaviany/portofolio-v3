@@ -1,6 +1,17 @@
 "use client";
 
-import { useState } from "react";
+// icons
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+interface ExperienceListProps {
+  jobTitle: string;
+  company: string;
+  location: string;
+  duration: string;
+  techStack: string[];
+  open: boolean;
+  onToggle: () => void;
+}
 
 const ExperienceList = ({
   jobTitle,
@@ -8,49 +19,51 @@ const ExperienceList = ({
   location,
   duration,
   techStack,
-}: {
-  jobTitle: string;
-  company: string;
-  location: string;
-  duration: string;
-  techStack: string[];
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDetails = () => {
-    setIsOpen(!isOpen);
-    console.log("clicked");
-  };
-
+  open,
+  onToggle,
+}: ExperienceListProps) => {
   return (
-    <div
-      className="w-3xl px-10 py-5 my-10 bg-[#282828] rounded-md"
-      onClick={toggleDetails}
-    >
-      <div className="my-5 text-start font-bold">
-        <h2 className="text-lg truncate">
-          {jobTitle} @ {company}
-        </h2>
+    <>
+      <div className="w-full px-4 py-2 my-10 bg-[#282828] rounded-md">
+        <button
+          onClick={onToggle}
+          className="w-full flex justify-between items-center px-8 py-4
+            text-left font-bold"
+        >
+          <span className="text-lg truncate">
+            {jobTitle} @ {company}
+          </span>
+          <span className="float-right">
+            {open ? <ChevronUp /> : <ChevronDown />}
+          </span>
+        </button>
       </div>
+
       {/* detail */}
-      <div className={`mt-2 py-2 text-start ${isOpen ? "" : "hidden"}`}>
-        <div className="italic">
-          <p>{location}</p>
-          <p>{duration}</p>
-        </div>
-        <div className="flex flex-wrap py-3 mt-3">
-          {techStack.map((item, index) => (
-            <span
-              key={index}
-              className="px-5 py-4 my-2 mr-4 bg-[#1e1e1e] border
-                border-[#646464] rounded-4xl text-sm"
-            >
-              {item}
-            </span>
-          ))}
+      <div
+        className={`w-full relative bottom-9 bg-[#1e1e1e] text-start rounded-md
+          transition-all duration-300 overflow-hidden
+          ${open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"} `}
+      >
+        <div className="p-5 mx-7">
+          <span>{location}</span>
+          <br />
+          <span>{duration}</span>
+
+          <div className="grid grid-cols-5 py-3 mt-3 text-center">
+            {techStack.map((item, index) => (
+              <span
+                key={index}
+                className="px-5 py-4 my-2 mr-4 bg-[#1e1e1e] border
+                  border-[#646464] rounded-4xl text-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
