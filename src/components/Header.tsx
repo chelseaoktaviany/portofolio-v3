@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <header
       className="w-full fixed bg-transparent top-0 z-50 backdrop-blur-sm
-        border-b border-[#ebebeb]/5"
+        border-b border-zinc-50/5"
     >
       <nav
         className="max-w-6xl mx-auto px-6 py-2 flex items-center
@@ -87,10 +87,10 @@ const Header = () => {
         </ul>
 
         <Button
-          className="p-2 rounded-full hover:bg-[#ebebeb]/5 transition-colors"
+          className="p-2 rounded-full hover:bg-zinc-50/5 transition-colors"
           onClick={handleToggleDarkMode}
         >
-          <span className="text-[16px] text-[#ebebeb]">
+          <span className="text-lg text-zinc-50">
             {isDarkMode ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
           </span>
         </Button>
