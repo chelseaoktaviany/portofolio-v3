@@ -10,7 +10,7 @@ const Hero = () => {
       >
         Chelsea Oktaviany
       </h1>
-      <h2 className="text-2xl font-light font(family-name:--font-pontano-sans">
+      <h2 className="text-2xl font-light font-(family-name:--font-pontano-sans">
         Fullstack Developer | linkedin.com/in/chelseaoktaviany
       </h2>
     </div>

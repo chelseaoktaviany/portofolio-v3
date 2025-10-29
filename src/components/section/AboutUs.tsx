@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+
 const AboutUs = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-full w-full">
@@ -17,7 +19,7 @@ const AboutUs = () => {
         </h1>
         <p
           className="lg:text-2xl md:text-base leading-[40px] font-light
-            font(family-name:--font-pontano-sans)"
+            font-(family-name:--font-pontano-sans)"
         >
           I am a fresh graduate in Computer Science with 1 year of experience in
           full-stack web development. Proficient in MERN stack (MongoDB,
@@ -29,25 +31,24 @@ const AboutUs = () => {
 
         <div className="flex space-x-5 justify-center md:justify-start">
           {/* button for download cv */}
-          <Link
-            href="#"
-            className="w-[200px] inline-block my-8 px-3 py-5 rounded-md
-              tracking-wider bg-[#ebebeb] hover:bg-[#18181b]
-              hover:text-[#ebebeb] transition uppercase text-center
-              text-[#121212]"
+          <Button
+            className="w-50 h-15 my-8 px-3 py-5 tracking-wider bg-zinc-50
+              hover:bg-zinc-800 text-zinc-900 hover:text-zinc-50 transition
+              uppercase text-center"
+            variant="default"
           >
-            read more
-          </Link>
+            <Link href="">read more</Link>
+          </Button>
 
           {/* button for download cv */}
-          <Link
-            href="#"
-            className="w-[200px] inline-block my-8 px-3 py-5 border-1
-              border-[#ffffff] rounded-md tracking-wider hover:bg-[#ebebeb]/5
-              transition uppercase text-center"
+          <Button
+            className="w-50 h-15 my-8 px-3 py-5 border-1 border-zinc-50
+              tracking-wider hover:bg-zinc-50/5 transition text-center
+              uppercase"
+            variant="ghost"
           >
-            download cv
-          </Link>
+            <Link href="#">download cv</Link>
+          </Button>
         </div>
       </div>
       {/* right content - image */}

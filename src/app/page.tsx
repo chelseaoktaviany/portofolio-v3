@@ -23,7 +23,7 @@ export default async function Home() {
 
       {/* about section */}
       <section
-        className="w-full h-screen flex items-center bg-[#050505]"
+        className="w-full h-screen flex items-center bg-zinc-950"
         id="about"
       >
         <AboutUs />

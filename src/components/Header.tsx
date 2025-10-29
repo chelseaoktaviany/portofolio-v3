@@ -59,21 +59,24 @@ const Header = () => {
   return (
     <header
       className="w-full fixed bg-transparent top-0 z-50 backdrop-blur-sm
-        bg-transparent border-b border-[#ebebeb]/5"
+        border-b border-[#ebebeb]/5"
     >
       <nav
-        className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between
-          font(family-name:--font-afacad))"
+        className="max-w-6xl mx-auto px-6 py-2 flex items-center
+          justify-between"
       >
         <span
-          className="my-5 text-[32px] tracking-wide
+          className="my-5 text-2xl tracking-wide
             font-(family-name:--font-archivo-black)"
         >
           ch.
         </span>
 
         {/* link items */}
-        <ul className="flex space-x-10 text-zinc-300">
+        <ul
+          className="flex space-x-10 text-xl text-zinc-300
+            font-(family-name:--font-afacad)"
+        >
           <li className="flex justify-center items-center">
             {linkItem.map((item) => (
               <a key={item.id} href={item.href} className={item.className}>

@@ -9,13 +9,13 @@ interface SkillCardProps {
 const SkillCard: FC<SkillCardProps> = ({ skillTitle, icon: Icon }) => {
   return (
     <li
-      className="flex flex-col items-center px-10 py-6 border
-        border-[#ebebeb]/50 rounded-lg shadow-md hover:shadow-lg
-        hover:bg-[#ebebeb]/30 transition duration-300"
+      className="flex flex-col items-center px-10 py-6 border border-zinc-50/50
+        rounded-lg shadow-md hover:shadow-lg hover:bg-zinc-50/30 transition
+        duration-300"
     >
-      <Icon className="py-8 w-40 h-40 fill-[#ebebeb]" />
+      <Icon className="py-8 w-40 h-40 fill-zinc-50" />
       <p
-        className="text-[#ebebeb] font(family-name:--font-pontano-sans)
+        className="text-zinc-50 font-(family-name:--font-pontano-sans)
           lowercase"
       >
         {skillTitle}

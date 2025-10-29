@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Archivo_Black,
-  Pontano_Sans,
-  Afacad,
-  Gowun_Dodum,
-} from "next/font/google";
+import { Archivo_Black, Pontano_Sans, Afacad } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -15,23 +8,13 @@ import Footer from "@/components/Footer";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
   subsets: ["latin"],
   weight: "400",
 });
 
-const pontanaSans = Pontano_Sans({
+const pontanoSans = Pontano_Sans({
   variable: "--font-pontano-sans",
   subsets: ["latin"],
 });
@@ -39,12 +22,6 @@ const pontanaSans = Pontano_Sans({
 const afacad = Afacad({
   variable: "--font-afacad",
   subsets: ["latin"],
-});
-
-const gowunDodum = Gowun_Dodum({
-  variable: "--font-gowun-dodum",
-  subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -60,9 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}
-          ${archivoBlack.variable} ${pontanaSans.variable} ${afacad.variable}
-          ${gowunDodum.variable} antialiased`}
+        className={` ${archivoBlack.variable} ${pontanoSans.variable}
+          ${afacad.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -72,8 +48,8 @@ export default function RootLayout({
         >
           <div className="font-sans w-full min-h-screen">
             <main
-              className="bg-radial from-[#e8e8e8] to-[#f4f4f5] to-100%
-                dark:from-[#151515] dark:to-[#050505] dark:to-100% flex flex-col
+              className="bg-radial from-zinc-100 to-zinc-300 to-100%
+                dark:from-zinc-900 dark:to-zinc-950 dark:to-100% flex flex-col
                 row-start-2 items-center md:items-center sm:items-start"
             >
               <Header />

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+
 // icons
 import HTML5 from "@/svg/html5-plain.svg";
 import CSS3 from "@/svg/css3-plain.svg";
@@ -77,14 +79,13 @@ const Skills = async () => {
 
       {/* more skills button */}
       <div className="py-8 my-10">
-        <Link
-          className="px-10 py-6 rounded-sm bg-transparent border
-            border-[#ebebeb] hover:bg-[#ebebeb]/30 tracking-wider
-            transition-colors uppercase"
-          href="#"
+        <Button
+          className="w-50 h-18 px-10 py-6 border border-zinc-50
+            hover:bg-zinc-50/30 tracking-wider transition-colors uppercase"
+          variant="ghost"
         >
-          More skills
-        </Link>
+          <Link href="#">More skills</Link>
+        </Button>
       </div>
     </div>
   );

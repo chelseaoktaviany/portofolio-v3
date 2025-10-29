@@ -24,7 +24,7 @@ const ExperienceList = ({
 }: ExperienceListProps) => {
   return (
     <>
-      <div className="w-full px-4 py-2 my-10 bg-[#282828] rounded-md">
+      <div className="w-full px-4 py-2 my-10 bg-zinc-800 rounded-md">
         <button
           onClick={onToggle}
           className="w-full flex justify-between items-center px-8 py-4
@@ -41,7 +41,7 @@ const ExperienceList = ({
 
       {/* detail */}
       <div
-        className={`w-full relative bottom-9 bg-[#1e1e1e] text-start rounded-md
+        className={`w-full relative bottom-9 bg-zinc-900 text-start rounded-md
           transition-all duration-300 overflow-hidden
           ${open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"} `}
       >
@@ -54,8 +54,8 @@ const ExperienceList = ({
             {techStack.map((item, index) => (
               <span
                 key={index}
-                className="px-5 py-4 my-2 mr-4 bg-[#1e1e1e] border
-                  border-[#646464] rounded-4xl text-sm"
+                className="px-5 py-4 my-2 mr-4 bg-zinc-800 border
+                  border-zinc-600 rounded-4xl text-sm"
               >
                 {item}
               </span>
