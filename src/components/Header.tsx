@@ -15,7 +15,7 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const classNames = "px-4 hover:text-white transition-colors cursor-pointer";
+  const classNames = "px-4 hover:text-zinc-50 transition-colors cursor-pointer";
 
   const linkItem = [
     {
