@@ -54,8 +54,8 @@ const Experiences = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div
-        className="text-[70px] text-center md:text-center sm:text-center
-          font-bold font-(family-name:--font-archivo-black) mb-10"
+        className="text-6xl text-center md:text-center sm:text-center font-bold
+          font-(family-name:--font-archivo-black) py-10 mb-10"
       >
         Work Experiences
       </div>

@@ -61,8 +61,8 @@ const Skills = async () => {
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <h1
-        className="text-[70px] text-center md:text-center sm:text-center
-          font-bold font-(family-name:--font-archivo-black) mb-10"
+        className="text-6xl text-center md:text-center sm:text-center font-bold
+          font-(family-name:--font-archivo-black) py-10 mb-10"
       >
         Tools & Skills
       </h1>
@@ -80,8 +80,9 @@ const Skills = async () => {
       {/* more skills button */}
       <div className="py-8 my-10">
         <Button
-          className="w-50 h-18 px-10 py-6 border border-zinc-50
-            hover:bg-zinc-50/30 tracking-wider transition-colors uppercase"
+          className="w-50 h-18 px-10 py-6 border border-zinc-950
+            dark:border-zinc-50 hover:bg-zinc-950/30 dark:hover:bg-zinc-50/30
+            tracking-wider transition-colors uppercase"
           variant="ghost"
         >
           <Link href="#">More skills</Link>

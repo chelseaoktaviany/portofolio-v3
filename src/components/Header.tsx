@@ -15,7 +15,8 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const classNames = "px-4 hover:text-zinc-50 transition-colors cursor-pointer";
+  const classNames =
+    "px-4 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors cursor-pointer";
 
   const linkItem = [
     {
@@ -59,7 +60,7 @@ const Header = () => {
   return (
     <header
       className="w-full fixed bg-transparent top-0 z-50 backdrop-blur-sm
-        border-b border-zinc-50/5"
+        border-b border-zinc-950/5 dark:border-zinc-50/5"
     >
       <nav
         className="max-w-6xl mx-auto px-6 py-2 flex items-center
@@ -74,7 +75,7 @@ const Header = () => {
 
         {/* link items */}
         <ul
-          className="flex space-x-10 text-xl text-zinc-300
+          className="flex space-x-10 text-xl text-zinc-950 dark:text-zinc-300
             font-(family-name:--font-afacad)"
         >
           <li className="flex justify-center items-center">
@@ -87,10 +88,11 @@ const Header = () => {
         </ul>
 
         <Button
-          className="p-2 rounded-full hover:bg-zinc-50/5 transition-colors"
+          className="p-2 rounded-full hover:bg-zinc-950/5
+            dark:hover:bg-zinc-50/5 transition-colors"
           onClick={handleToggleDarkMode}
         >
-          <span className="text-lg text-zinc-50">
+          <span className="text-lg text-zinc-950 dark:text-zinc-50">
             {isDarkMode ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
           </span>
         </Button>
