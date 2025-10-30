@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Link from "next/link";
+
 import { Button } from "@mui/material";
 
 import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
@@ -21,36 +23,30 @@ const Header = () => {
   const linkItem = [
     {
       id: 0,
-      name: "home",
-      href: "#",
-      className: classNames,
-    },
-    {
-      id: 1,
       name: "about",
       href: "#about",
       className: classNames,
     },
     {
-      id: 2,
+      id: 1,
       name: "skills",
       href: "#skills",
       className: classNames,
     },
     {
-      id: 3,
+      id: 2,
       name: "experiences",
       href: "#experiences",
       className: classNames,
     },
     {
-      id: 4,
+      id: 3,
       name: "projects",
       href: "#projects",
       className: classNames,
     },
     {
-      id: 5,
+      id: 4,
       name: "contacts",
       href: "#contacts",
       className: classNames,
@@ -70,7 +66,7 @@ const Header = () => {
           className="my-5 text-2xl tracking-wide
             font-(family-name:--font-archivo-black)"
         >
-          ch.
+          <Link href="#">ch.</Link>
         </span>
 
         {/* link items */}
