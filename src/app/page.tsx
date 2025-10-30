@@ -1,9 +1,9 @@
 // import { prisma } from "@/db/prisma";
 
-import Hero from "@/components/section/Hero";
-import AboutUs from "@/components/section/AboutUs";
-import Skills from "@/components/section/Skills";
-import Experiences from "@/components/section/Experiences";
+import Hero from "@/components/sections/Hero";
+import AboutUs from "@/components/sections/AboutUs";
+import Skills from "@/components/sections/Skills";
+import Experiences from "@/components/sections/Experiences";
 
 export default async function Home() {
   // server component fetch
@@ -45,6 +45,8 @@ export default async function Home() {
       >
         <Experiences />
       </section>
+
+      {/* projects section */}
     </>
   );
 }
