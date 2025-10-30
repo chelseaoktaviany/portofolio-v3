@@ -27,7 +27,11 @@ model Projects {
   title String
   projectDescription String
   projectLink String
+  demoLink String
   techStack String[]
+  projectImage String
+  startDate DateTime
+  endDate DateTime?
   createdAt DateTime @default(now())
 }
 
