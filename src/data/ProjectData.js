@@ -1,0 +1,48 @@
+export const projectsData = [
+  {
+    id: 0,
+    title: "CMS Puskesmas",
+    projectDescription:
+      "A project is to build a Content Management System web application for doctors, patients, and admins including login, register session, and dashboard. The web application implemented CRUD (Create, Read, Update and Delete) operation. This project is done by myself as Web Developer",
+    projectLink: "https://github.com/chelseaoktaviany/cms-puskesmas",
+    demoLink: "#",
+    techStack: ["HTML", "CSS", "JS", "PHP", "Bootstrap", "MySQL"],
+    startDate: "2022-02-01",
+    endDate: "2022-03-01",
+    createdAt: Date.now(),
+  },
+  {
+    id: 1,
+    title: "Personal Website",
+    projectDescription:
+      "An external project is to build a web application for personal includes about, experiences, skills, projects and contact. This project is done by myself as a Web Developer.",
+    demoLink: "http://chel-dev.netlify.app/",
+    projectLink: "https://github.com/chelseaoktaviany/portfolio-chelsea",
+    techStack: ["HTML", "CSS", "JS", "Bootstrap", "Netlify"],
+    startDate: "2022-05-01",
+    endDate: "2022-10-01",
+    createdAt: Date.now(),
+  },
+  {
+    id: 2,
+    title: "Sushiku",
+    projectDescription:
+      "A project is to build a web application for restaurant including sign in,registration, food menu, and etc. This project is currently working in progress by myself as a Web Developer",
+    demoLink: "#",
+    projectLink: "https://github.com/chelseaoktaviany/sushiku",
+    techStack: [
+      "HTML",
+      "CSS",
+      "JS",
+      "Bootstrap",
+      "NodeJS",
+      "ExpressJS",
+      "MySQL",
+      "Sequelize",
+      "EJS",
+    ],
+    startDate: "2022-09-01",
+    endDate: "",
+    createdAt: Date.now(),
+  },
+];
