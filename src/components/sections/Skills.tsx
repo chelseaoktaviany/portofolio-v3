@@ -7,9 +7,9 @@ import SkillCard from "@/components/SkillCard";
 // data
 import { skillLists } from "@/data/SkillData";
 
-const Skills = async () => {
+const Skills = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-20">
+    <div className="flex flex-col justify-center items-center mt-5">
       <h1
         className="text-6xl text-center md:text-center sm:text-center font-bold
           font-(family-name:--font-archivo-black) py-10 mb-10"
