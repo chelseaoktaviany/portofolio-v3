@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import AboutUs from "@/components/sections/AboutUs";
 import Skills from "@/components/sections/Skills";
 import Experiences from "@/components/sections/Experiences";
+import Projects from "@/components/sections/Projects";
 
 export default async function Home() {
   // server component fetch
@@ -47,6 +48,12 @@ export default async function Home() {
       </section>
 
       {/* projects section */}
+      <section
+        className="w-full h-screen flex justify-center items-center"
+        id="projects"
+      >
+        <Projects />
+      </section>
     </>
   );
 }
