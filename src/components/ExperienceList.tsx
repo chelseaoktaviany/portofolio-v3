@@ -3,15 +3,8 @@
 // icons
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-interface ExperienceListProps {
-  jobTitle: string;
-  company: string;
-  location: string;
-  duration: string;
-  techStack: string[];
-  open: boolean;
-  onToggle: () => void;
-}
+// types
+import { ExperienceListProps } from "@/types/experiences";
 
 const ExperienceList = ({
   jobTitle,

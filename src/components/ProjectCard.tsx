@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// types
+import { ProjectCardProps } from "@/types/projects";
+
 // components
 import {
   Card,
@@ -12,17 +15,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-interface ProjectCardProps {
-  title: string;
-  projectDescription: string;
-  projectLink: string;
-  demoLink: string;
-  techStack: string[];
-  startDate: string;
-  endDate: string;
-  createdAt: number;
-}
 
 const ProjectCard = ({
   title,

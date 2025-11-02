@@ -1,10 +1,8 @@
 // import Image from "next/image";
 import { FC } from "react";
 
-interface SkillCardProps {
-  skillTitle: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
+// types
+import { SkillCardProps } from "@/types/skills";
 
 const SkillCard: FC<SkillCardProps> = ({ skillTitle, icon: Icon }) => {
   return (
