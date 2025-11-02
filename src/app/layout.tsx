@@ -3,7 +3,7 @@ import { Archivo_Black, Pontano_Sans, Afacad } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-import Header from "../components/Header";
+import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/Footer";
 
 import "./globals.css";
