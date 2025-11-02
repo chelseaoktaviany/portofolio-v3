@@ -4,7 +4,7 @@ import { Archivo_Black, Pontano_Sans, Afacad } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import Navbar from "@/components/navigation/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/navigation/Footer";
 
 import "./globals.css";
 
@@ -52,7 +52,7 @@ export default function RootLayout({
                 dark:from-zinc-900 dark:to-zinc-950 dark:to-100% flex flex-col
                 row-start-2 items-center md:items-center sm:items-start"
             >
-              <Header />
+              <Navbar />
               {children}
               {/* <Footer /> */}
             </main>
