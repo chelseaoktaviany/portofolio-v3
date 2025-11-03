@@ -1,18 +1,7 @@
-import { prisma } from "../../../db/prisma";
-
-export default async function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = params;
-
-  const project = await prisma.projects.findUnique({ where: { id } });
-  if (!project) return <div>Project not found</div>;
-
+export default async function ProjectPage() {
   return (
     <div>
-      <h1>{project.title}</h1>
+      <h1>test</h1>
     </div>
   );
 }

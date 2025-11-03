@@ -7,13 +7,7 @@ import Experiences from "@/components/sections/Experiences";
 import Projects from "@/components/sections/Projects";
 
 export default async function Home() {
-  // server component fetch
-  // const [skills, projects, certifications] =
-  //   await Promise.all([
-  //     prisma.skills.findMany({ orderBy: { id: "asc" } }),
-  //     prisma.projects.findMany({ take: 3, orderBy: { id: "asc" } }),
-  //     prisma.certifications.findMany({ orderBy: { id: "asc" } }),
-  //   ]);
+  // server component fetch (soon)
 
   return (
     <>
@@ -48,12 +42,14 @@ export default async function Home() {
       </section>
 
       {/* projects section */}
-      <section
-        className="w-full h-screen flex justify-center items-center"
-        id="projects"
-      >
+      <section className="w-full h-screen py-16" id="projects">
         <Projects />
       </section>
+
+      {/* contact us section */}
+      <section
+        className="w-full h-screen py-16 flex justify-center items-center"
+      ></section>
     </>
   );
 }

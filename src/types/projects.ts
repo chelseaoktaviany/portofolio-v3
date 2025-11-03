@@ -4,6 +4,7 @@ export interface ProjectCardProps {
   projectLink: string;
   demoLink: string;
   techStack: string[];
+  projectImage?: string;
   startDate: string;
   endDate: string;
   createdAt: number;
