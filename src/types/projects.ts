@@ -1,4 +1,4 @@
-export interface ProjectCardProps {
+export interface ProjectImageProps {
   title: string;
   projectDescription: string;
   projectLink: string;
@@ -7,5 +7,15 @@ export interface ProjectCardProps {
   projectImage?: string;
   startDate: string;
   endDate: string;
-  createdAt: number;
+}
+
+export interface ProjectModalProps {
+  title: string;
+  projectDescription: string;
+  projectLink: string;
+  demoLink: string;
+  techStack: string[];
+  projectImage?: string;
+  startDate: string;
+  endDate: string;
 }

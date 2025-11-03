@@ -3,7 +3,7 @@ import Link from "next/link";
 // components
 import { Skeleton } from "@/components/ui/skeleton";
 
-import ProjectCard from "@/components/ProjectCard";
+import ProjectImage from "@/components/ProjectImage";
 
 // data
 import { projectsData } from "@/data/ProjectData";
@@ -18,19 +18,12 @@ const Projects = () => {
         Projects
       </h1>
       {/*projects list */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto">
         {projectsData.map((item) => (
-          <ProjectCard
+          <ProjectImage
             key={item.id}
             title={item.title}
-            projectDescription={item.projectDescription}
-            projectLink={item.projectLink}
-            demoLink={item.demoLink}
-            techStack={item.techStack}
             projectImage={item.projectImage}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            createdAt={item.createdAt}
           />
         ))}
       </div>
