@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 // components
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
 import ProjectImage from "@/components/ProjectImage";
@@ -32,7 +35,16 @@ const Projects = () => {
         ))}
       </div>
       {/* more projects button */}
-      {/* <div className="w-full flex justify-center items-center py-16">soon</div> */}
+      <div className="flex justify-center items-center py-8 my-20">
+        <Button
+          className="w-50 h-18 px-10 py-6 border border-zinc-950
+            dark:border-zinc-50 hover:bg-zinc-950/30 dark:hover:bg-zinc-50/30
+            tracking-wider transition-colors uppercase hover:cursor-pointer"
+          variant="ghost"
+        >
+          <Link href="#">More projects</Link>
+        </Button>
+      </div>
     </div>
   );
 };

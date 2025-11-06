@@ -52,7 +52,7 @@ const ExperienceList = ({
                 key={index}
                 className="px-5 py-4 my-2 mr-4 bg-zinc-300 dark:bg-zinc-800
                   border border-zinc-900 dark:border-zinc-600 rounded-4xl
-                  text-sm"
+                  text-sm hover:cursor-pointer"
               >
                 {item}
               </span>

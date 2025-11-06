@@ -48,9 +48,8 @@ export default function RootLayout({
         >
           <div className="font-sans w-full min-h-screen">
             <main
-              className="bg-radial from-zinc-100 to-zinc-300 to-100%
-                dark:from-zinc-900 dark:to-zinc-950 dark:to-100% flex flex-col
-                row-start-2 items-center md:items-center sm:items-start"
+              className="flex flex-col row-start-2 items-center md:items-center
+                sm:items-start"
             >
               <Navbar />
               {children}

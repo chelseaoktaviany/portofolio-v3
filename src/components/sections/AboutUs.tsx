@@ -45,7 +45,8 @@ const AboutUs = () => {
           <Button
             className="w-50 h-15 my-8 px-3 py-5 border-1 border-zinc-950
               dark:border-zinc-50 tracking-wider hover:bg-zinc-950/5
-              dark:hover:bg-zinc-50/5 transition text-center uppercase"
+              dark:hover:bg-zinc-50/5 transition text-center uppercase
+              hover:cursor-pointer"
             variant="ghost"
           >
             <Link href="#">download cv</Link>
