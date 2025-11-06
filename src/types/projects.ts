@@ -8,14 +8,3 @@ export interface ProjectImageProps {
   startDate: string;
   endDate: string;
 }
-
-export interface ProjectModalProps {
-  title: string;
-  projectDescription: string;
-  projectLink: string;
-  demoLink: string;
-  techStack: string[];
-  projectImage?: string;
-  startDate: string;
-  endDate: string;
-}
