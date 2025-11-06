@@ -53,9 +53,12 @@ export default async function Home() {
       </section>
 
       {/* contact us section */}
-      {/* <section
+      <section
         className="w-full h-screen py-16 flex justify-center items-center"
-      ></section> */}
+        id="contact"
+      >
+        <Contact />
+      </section>
     </>
   );
 }

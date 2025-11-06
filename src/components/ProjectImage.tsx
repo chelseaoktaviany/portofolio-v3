@@ -27,8 +27,8 @@ const ProjectImage = ({
         <div className="relative w-full h-100 hover:cursor-pointer">
           <Image
             fill
-            className="grayscale hover:filter-none brightness-100 object-cover
-              transition-colors rounded-sm"
+            className="grayscale hover:filter-none brightness-60 object-cover
+              transition-all rounded-sm"
             sizes="(max-width: 768px) 100vw, 33vw"
             src={projectImage || `https://placehold.co/600x400.png`}
             alt={title}

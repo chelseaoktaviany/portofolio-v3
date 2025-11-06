@@ -11,7 +11,7 @@ import { projectsData } from "@/data/ProjectData";
 
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col justify-center items-center mt-5">
       <h1
         className="text-6xl text-center md:text-center sm:text-center font-bold
           font-(family-name:--font-archivo-black) py-10 mb-10"
@@ -19,7 +19,7 @@ const Projects = () => {
         Projects
       </h1>
       {/*projects list */}
-      <div className="w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto">
+      <div className="w-xxl grid grid-cols-1 md:grid-cols-3 gap-10">
         {projectsData.map((item) => (
           <ProjectImage
             key={item.id}
@@ -34,8 +34,9 @@ const Projects = () => {
           />
         ))}
       </div>
+
       {/* more projects button */}
-      <div className="flex justify-center items-center py-8 my-20">
+      <div className="py-8 my-10">
         <Button
           className="w-50 h-18 px-10 py-6 border border-zinc-950
             dark:border-zinc-50 hover:bg-zinc-950/30 dark:hover:bg-zinc-50/30

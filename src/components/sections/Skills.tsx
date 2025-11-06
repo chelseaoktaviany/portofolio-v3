@@ -17,7 +17,7 @@ const Skills = () => {
         Tools & Skills
       </h1>
       {/* skills list */}
-      <div className="grid md:grid-cols-4 gap-10 max-w-6xl w-full">
+      <div className="max-w-6xl w-full grid md:grid-cols-4 gap-10">
         {skillLists.map((item) => (
           <SkillCard
             key={item.id}
