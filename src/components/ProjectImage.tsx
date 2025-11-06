@@ -30,7 +30,7 @@ const ProjectImage = ({
             className="grayscale hover:filter-none brightness-60 object-cover
               transition-all rounded-sm"
             sizes="(max-width: 768px) 100vw, 33vw"
-            src={projectImage || `https://placehold.co/600x400.png`}
+            src={projectImage || `/images/placeholder600x400.png`}
             alt={title}
           />
         </div>
