@@ -1,9 +1,14 @@
 "use client";
 
 // lib
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// store
+import { useContactStore } from "@/store/contactStore";
+
+// validation
+import { contactSchema, ContactFormData } from "@/lib/validation";
 
 // components
 import {
@@ -12,33 +17,21 @@ import {
   FormItem,
   FormControl,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-interface ContactFormProps {
-  name: string;
-  emailAddress: string;
-  message: string;
-}
+const classNameInput =
+  "py-7 border border-zinc-950/40 dark:border-zinc-50/40 !text-lg placeholder:text-lg";
 
-const formSchema = z.object({
-  name: z.string().min(4, {
-    message: "Your name must be at least 4 character",
-  }),
-  emailAddress: z.email({ message: "Your e-mail must be valid" }),
-  message: z
-    .string()
-    .max(255, { message: "Your message must not be 255 characters" }),
-});
+const classNameLabel = "text-lg";
 
-const classNameForm = "py-6 border dark:border-zinc-50/40";
-
-const ContactForm = ({ name, emailAddress, message }: ContactFormProps) => {
+const ContactForm = () => {
   // defining form
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       emailAddress: "",
@@ -46,9 +39,26 @@ const ContactForm = ({ name, emailAddress, message }: ContactFormProps) => {
     },
   });
 
+  const { loading, success, error, setStatus, reset } = useContactStore();
+
   // defining submit handler
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = (values: ContactFormData) => {
+    setStatus({ loading: true, error: null, success: false });
+
+    // api handle (soon)
+
+    try {
+      setStatus({ success: true });
+
+      reset();
+
+      // log
+      console.log(values);
+    } catch (err: any) {
+      setStatus({ error: err.message });
+    } finally {
+      setStatus({ loading: false });
+    }
   };
 
   return (
@@ -63,14 +73,15 @@ const ContactForm = ({ name, emailAddress, message }: ContactFormProps) => {
             name={"name"}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className={classNameLabel}>Name</FormLabel>
                 <FormControl>
                   <Input
-                    className={classNameForm}
+                    className={classNameInput}
                     placeholder="Your name..."
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -79,14 +90,16 @@ const ContactForm = ({ name, emailAddress, message }: ContactFormProps) => {
             name="emailAddress"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel className={classNameLabel}>Email address</FormLabel>
                 <FormControl>
                   <Input
-                    className={classNameForm}
+                    type="email"
+                    className={classNameInput}
                     placeholder="Your e-mail address..."
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -95,23 +108,40 @@ const ContactForm = ({ name, emailAddress, message }: ContactFormProps) => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className={classNameLabel}>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="py-3 border dark:border-zinc-50/30"
+                    className="h-50 py-3 border border-zinc-950/30
+                      dark:border-zinc-50/30 placeholder:text-lg !text-lg
+                      resize-none"
                     placeholder="Write a message.."
+                    rows={7}
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
+
+          {/*error handling*/}
+          {error && (
+            <FormMessage className="text-sm text-red-500">{error}</FormMessage>
+          )}
+          {success && (
+            <FormMessage className="text-sm text-green-600">
+              Message sent successfully!
+            </FormMessage>
+          )}
+
           <Button
-            className="w-full px-4 py-7 uppercase"
-            variant="default"
             type="submit"
+            disabled={loading}
+            className="w-full px-4 py-7 hover:cursor-pointer uppercase
+              tracking-wider"
+            variant="default"
           >
-            submit
+            {loading ? "sending..." : "send message"}
           </Button>
         </form>
       </Form>

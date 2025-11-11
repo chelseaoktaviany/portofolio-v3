@@ -49,7 +49,9 @@ const AboutUs = () => {
               hover:cursor-pointer"
             variant="ghost"
           >
-            <Link href="#">download cv</Link>
+            <Link href="/pdf/resume-english.pdf" download>
+              download cv
+            </Link>
           </Button>
         </div>
       </div>
