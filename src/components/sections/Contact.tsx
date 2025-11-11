@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // components
-import ContactFormInput from "@/components/ContactFormInput";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   // data for contact section
@@ -21,7 +21,7 @@ const Contact = () => {
       </h1>
       {/*form inputs*/}
       <div className="w-full flex justify-center items-center mt-15">
-        <ContactFormInput />
+        <ContactForm />
       </div>
     </div>
   );
