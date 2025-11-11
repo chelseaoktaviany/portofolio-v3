@@ -52,7 +52,7 @@ export default async function Home() {
         <Projects />
       </section>
 
-      {/* contact us section */}
+      {/* contact me section */}
       <section
         className="w-full h-screen py-16 flex justify-center items-center"
         id="contact"

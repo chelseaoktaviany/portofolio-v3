@@ -3,20 +3,29 @@
 import { useState } from "react";
 
 // components
-import FormInput from "../FormInput";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
+  // data for contact section
+  const [name, setName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
-    <div className="flex flex-col justify-center items-center mt-5">
+    <div className="w-full flex flex-col justify-center items-center my-5">
       <h1
         className="text-6xl text-center md:text-center sm:text-center font-bold
           font-(family-name:--font-archivo-black) py-10 mb-10"
       >
-        Contact Us
+        Contact Me
       </h1>
       {/*form inputs*/}
-      <div className="w-full flex justify-center items-center mt-15">
-        <FormInput />
+      <div className="w-full flex justify-center items-center mt-8">
+        <ContactForm
+          name={name}
+          emailAddress={emailAddress}
+          message={message}
+        />
       </div>
     </div>
   );
