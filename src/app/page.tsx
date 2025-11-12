@@ -15,7 +15,7 @@ export default async function Home() {
     <>
       {/* intro section */}
       <section
-        className="w-full h-screen bg-radial from-zinc-100 to-zinc-300 to-100%
+        className="w-full h-screen bg-radial from-zinc-300 to-zinc-400 to-100%
           dark:from-zinc-900 dark:to-zinc-950 dark:to-100% min-h-screen flex
           justify-center items-center"
       >

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Link from "next/link";
 
@@ -10,11 +10,11 @@ import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  // setting dark mode toggle
-  const handleToggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+  const handleDarkMode = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle("dark");
   };
 
   const classNames =
@@ -86,10 +86,10 @@ const Navbar = () => {
         <Button
           className="p-2 rounded-full hover:bg-zinc-950/5
             dark:hover:bg-zinc-50/5 transition-colors"
-          onClick={handleToggleDarkMode}
+          onClick={handleDarkMode}
         >
           <span className="text-lg text-zinc-950 dark:text-zinc-50">
-            {isDarkMode ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
+            {isDark ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
           </span>
         </Button>
       </nav>
