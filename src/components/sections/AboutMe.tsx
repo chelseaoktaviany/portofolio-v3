@@ -32,7 +32,7 @@ const AboutUs = () => {
         <div className="flex space-x-5 justify-center md:justify-start">
           <Button
             className="w-50 h-15 my-8 px-3 py-5 tracking-wider bg-zinc-950
-              dark:bg-zinc-50 hover:bg-zinc-300 dark:hover:bg-zinc-800
+              dark:bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800
               text-zinc-100 dark:text-zinc-900 hover:text-zinc-900
               dark:hover:text-zinc-50 transition uppercase text-center"
             variant="default"
