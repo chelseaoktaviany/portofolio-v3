@@ -30,7 +30,6 @@ const AboutUs = () => {
         </p>
 
         <div className="flex space-x-5 justify-center md:justify-start">
-          {/* button for download cv */}
           <Button
             className="w-50 h-15 my-8 px-3 py-5 tracking-wider bg-zinc-950
               dark:bg-zinc-50 hover:bg-zinc-300 dark:hover:bg-zinc-800
@@ -38,20 +37,7 @@ const AboutUs = () => {
               dark:hover:text-zinc-50 transition uppercase text-center"
             variant="default"
           >
-            <Link href="#">read more</Link>
-          </Button>
-
-          {/* button for download cv */}
-          <Button
-            className="w-50 h-15 my-8 px-3 py-5 border-1 border-zinc-950
-              dark:border-zinc-50 tracking-wider hover:bg-zinc-950/5
-              dark:hover:bg-zinc-50/5 transition text-center uppercase
-              hover:cursor-pointer"
-            variant="ghost"
-          >
-            <Link href="/pdf/resume-english.pdf" download>
-              download cv
-            </Link>
+            <Link href="#contact">let&apos;s connect</Link>
           </Button>
         </div>
       </div>
