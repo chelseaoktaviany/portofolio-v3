@@ -18,7 +18,7 @@ const ExperienceList = ({
   return (
     <>
       <div
-        className="w-full px-4 py-2 my-10 bg-zinc-500 dark:bg-zinc-800
+        className="w-full px-4 py-2 my-10 bg-zinc-300 dark:bg-zinc-800
           rounded-md"
       >
         <button
@@ -37,7 +37,7 @@ const ExperienceList = ({
 
       {/* detail */}
       <div
-        className={`w-full relative bottom-9 bg-zinc-400 dark:bg-zinc-900
+        className={`w-full relative bottom-9 bg-zinc-200 dark:bg-zinc-900
           text-start rounded-md transition-all duration-300 overflow-hidden
           ${open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"} `}
       >
@@ -50,7 +50,7 @@ const ExperienceList = ({
             {techStack.map((item, index) => (
               <span
                 key={index}
-                className="px-5 py-4 my-2 mr-4 bg-zinc-300 dark:bg-zinc-800
+                className="px-5 py-4 my-2 mr-4 bg-zinc-100 dark:bg-zinc-800
                   border border-zinc-900 dark:border-zinc-600 rounded-4xl
                   text-sm hover:cursor-pointer"
               >
