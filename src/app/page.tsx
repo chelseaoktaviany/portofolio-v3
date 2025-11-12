@@ -48,15 +48,12 @@ export default async function Home() {
       </section>
 
       {/* projects section */}
-      <section className="w-full h-screen py-16" id="projects">
+      <section className="w-full h-screen" id="projects">
         <Projects />
       </section>
 
       {/* contact me section */}
-      <section
-        className="w-full h-screen py-16 flex justify-center items-center"
-        id="contact"
-      >
+      <section className="w-full h-120" id="contact">
         <Contact />
       </section>
     </>

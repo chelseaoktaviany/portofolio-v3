@@ -1,10 +1,9 @@
 const Footer = () => {
   return (
-    <footer
-      className="row-start-3 flex gap-[24px] flex-wrap items-center
-        justify-center"
-    >
-      test
+    <footer className="h-40 border-t border-zinc-950/5 dark:border-zinc-50/5">
+      <h1 className="text-lg text-center font-light">
+        &copy; 2022-{new Date().getFullYear()} chel.dev all rights reserved.
+      </h1>
     </footer>
   );
 };
