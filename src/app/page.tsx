@@ -2,7 +2,7 @@
 
 // sections
 import Hero from "@/components/sections/Hero";
-import AboutUs from "@/components/sections/AboutUs";
+import AboutMe from "@/components/sections/AboutMe";
 import Skills from "@/components/sections/Skills";
 import Experiences from "@/components/sections/Experiences";
 import Projects from "@/components/sections/Projects";
@@ -28,7 +28,7 @@ export default async function Home() {
           dark:bg-zinc-950"
         id="about"
       >
-        <AboutUs />
+        <AboutMe />
       </section>
 
       {/* skills section */}
