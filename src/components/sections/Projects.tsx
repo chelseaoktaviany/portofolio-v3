@@ -2,7 +2,6 @@ import Link from "next/link";
 
 // components
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 
 import ProjectImage from "@/components/ProjectImage";
 
