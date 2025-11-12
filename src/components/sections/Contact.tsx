@@ -9,18 +9,15 @@ const classNameIcons = "!text-5xl";
 
 const Contact = () => {
   return (
-    <div
-      className="w-full grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1
-        justify-center items-center my-5"
-    >
+    <div className="w-full flex flex-col justify-center items-center my-5">
       <h1
         className="text-6xl text-center md:text-center sm:text-center font-bold
-          font-(family-name:--font-archivo-black) py-9"
+          font-(family-name:--font-archivo-black) py-10"
       >
         Let&apos;s connect
       </h1>
       <p
-        className="text-xl text-muted-foreground text-center md:text-center
+        className="text-2xl text-muted-foreground text-center md:text-center
           sm:text-center font-light italic
           font-(family-name:--font-pontano-sans) py-0"
       >
