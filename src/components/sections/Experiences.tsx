@@ -10,9 +10,13 @@ const Experiences = () => {
   const [isOpenIndex, setIsOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      className="flex flex-col justify-center lg:justify-center
+        md:justify-center sm:justify-center lg:items-center"
+    >
       <h1
-        className="text-6xl text-center md:text-center sm:text-center font-bold
+        className="text-3xl lg:text-6xl md:text-5xl sm:text-4xl text-center
+          md:text-center sm:text-center font-bold
           font-(family-name:--font-archivo-black) py-10 mb-10"
       >
         Work Experiences

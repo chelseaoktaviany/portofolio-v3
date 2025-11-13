@@ -5,14 +5,18 @@ import { Button } from "@/components/ui/button";
 
 const AboutUs = () => {
   return (
-    <div className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
+    <div
+      className="w-full h-screen grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2
+        md:grid-cols-1 sm:grid-cols-1"
+    >
       {/* left content */}
       <div
         className="flex flex-col justify-center px-10 md:px-20 space-y-6
-          text-zinc-950 dark:text-zinc-50"
+          text-zinc-950 dark:text-zinc-50 text-center xl:text-start
+          lg:text-start md:text-center sm:text-center"
       >
         <h1
-          className="lg:text-xxl md:text-6xl font-bold
+          className="text-3xl lg:text-xxl md:text-6xl sm:text-4xl font-bold
             font-(family-name:--font-archivo-black)"
         >
           Hello,
@@ -29,12 +33,16 @@ const AboutUs = () => {
           technologies. Feel free to look at my CV.
         </p>
 
-        <div className="flex space-x-5 justify-center md:justify-start">
+        <div
+          className="flex space-x-5 lg:justify-start md:justify-center
+            sm:justify-center"
+        >
           <Button
-            className="w-50 h-15 my-8 px-3 py-5 tracking-wider bg-zinc-950
-              dark:bg-zinc-200 hover:bg-zinc-600 dark:hover:bg-zinc-800
-              text-zinc-100 dark:text-zinc-900 hover:text-zinc-100
-              dark:hover:text-zinc-50 transition uppercase text-center"
+            className="w-full lg:w-50 md:w-full sm:w-full h-15 my-8 px-3 py-5
+              tracking-wider bg-zinc-950 dark:bg-zinc-200 hover:bg-zinc-600
+              dark:hover:bg-zinc-800 text-zinc-100 dark:text-zinc-900
+              hover:text-zinc-100 dark:hover:text-zinc-50 transition uppercase
+              text-center"
             variant="default"
           >
             <Link href="#contact">let&apos;s connect</Link>
@@ -42,7 +50,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/* right content - image */}
-      <div className="relative hidden md:block">
+      <div className="relative hidden md:block sm:block">
         <Image
           className="w-full h-full object-cover brightness-70"
           src="/images/avatar.jpg"

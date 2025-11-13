@@ -22,9 +22,15 @@ const ProjectImage = ({
   const [isShown, setIsShown] = useState(false);
 
   return (
-    <div className="flex flex-col overflow-hidden w-xl px-2 py-3">
+    <div
+      className="flex flex-col overflow-hidden justify-center w-full lg:w-xl
+        px-2 py-3"
+    >
       <div className="p-0" onClick={() => setIsShown(true)}>
-        <div className="relative w-full h-100 hover:cursor-pointer">
+        <div
+          className="relative w-80 lg:w-full md:w-80 sm:w-80 h-100
+            hover:cursor-pointer"
+        >
           <Image
             fill
             className="grayscale hover:filter-none brightness-60 object-cover
