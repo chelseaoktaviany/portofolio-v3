@@ -24,7 +24,7 @@ export default async function Home() {
 
       {/* about section */}
       <section
-        className="w-full h-screen flex items-center bg-zinc-300
+        className="w-full lg:h-screen flex items-center bg-zinc-300
           dark:bg-zinc-950"
         id="about"
       >
@@ -33,7 +33,7 @@ export default async function Home() {
 
       {/* skills section */}
       <section
-        className="w-full h-screen flex justify-center items-center"
+        className="w-full lg:h-screen flex justify-center items-center"
         id="skills"
       >
         <Skills />
@@ -41,14 +41,14 @@ export default async function Home() {
 
       {/* experiences section  */}
       <section
-        className="w-full h-screen flex justify-center items-center"
+        className="w-full lg:h-screen flex justify-center items-center"
         id="experiences"
       >
         <Experiences />
       </section>
 
       {/* projects section */}
-      <section className="w-full h-screen" id="projects">
+      <section className="w-full lg:h-screen" id="projects">
         <Projects />
       </section>
 

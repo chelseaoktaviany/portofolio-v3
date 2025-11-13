@@ -56,7 +56,8 @@ const Navbar = () => {
   return (
     <header
       className="w-full fixed bg-transparent top-0 z-50 backdrop-blur-sm
-        border-b border-zinc-950/5 dark:border-zinc-50/5"
+        border-b border-zinc-950/5 dark:border-zinc-50/5 hidden md:block
+        sm:block"
     >
       <nav
         className="max-w-6xl mx-auto px-6 py-2 flex items-center
