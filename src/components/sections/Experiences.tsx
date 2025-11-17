@@ -17,7 +17,7 @@ const Experiences = () => {
       <h1
         className="text-3xl lg:text-6xl md:text-5xl sm:text-4xl text-center
           md:text-center sm:text-center font-bold
-          font-(family-name:--font-archivo-black) py-10 mb-10"
+          font-(family-name:--font-archivo-black) py-6"
       >
         Work Experiences
       </h1>

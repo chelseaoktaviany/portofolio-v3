@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
     <div
-      className="w-80 flex flex-col justify-center py-2 text-center
-        md:text-center sm:text-center"
+      className="w-80 lg:w-full md:w-full sm:w-80 flex flex-col justify-center
+        py-2 text-center lg:text-center md:text-center sm:text-center"
     >
       <h1
         className="text-2xl lg:text-5xl md:text-5xl sm:text-xl font-bold
