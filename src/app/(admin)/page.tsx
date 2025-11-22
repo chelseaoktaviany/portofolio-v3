@@ -1,5 +1,4 @@
 import React from "react";
-import { cookies } from "next/headers";
 
 const ADMIN_USER = process.env.ADMIN_USER;
 const ADMIN_PASS = process.env.ADMIN_PASS;
