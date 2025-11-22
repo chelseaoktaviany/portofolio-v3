@@ -3,22 +3,16 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "../../globals.css";
-
-// components
-import AdminNavbar from "../components/NavbarAdmin";
-import SidebarAdmin from "../components/SidebarAdmin";
-import FooterAdmin from "../components/FooterAdmin";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: "chel.dev - admin page",
-  description: "CMS for portofolio",
+  title: "admin page - login",
+  description: "auth page",
 };
 
-export default function AdminLayout({
+export default function AuthLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html className="scroll-smooth" lang="en" suppressHydrationWarning>
       <body className={"antialiased"}>
@@ -28,15 +22,12 @@ export default function AdminLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="font-sans w-full min-h-screen">
+          <div className="w-full min-h-screen">
             <main
               className="flex flex-col row-start-2 items-center md:items-center
                 sm:items-start"
             >
-              <AdminNavbar />
-              <SidebarAdmin />
               {children}
-              <FooterAdmin />
             </main>
           </div>
         </ThemeProvider>
