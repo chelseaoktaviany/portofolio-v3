@@ -7,7 +7,7 @@ import { Mail, GitHub, LinkedIn } from "@mui/icons-material";
 
 const classNameIcons = "text-2xl lg:!text-4xl md:!text-3xl sm:!text-2xl";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center px-5 my-5">
       <h1
@@ -43,4 +43,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

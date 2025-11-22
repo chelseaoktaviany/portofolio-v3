@@ -7,7 +7,7 @@ import Image from "next/image";
 import { ProjectImageProps } from "@/types/projects";
 
 // components
-import ProjectModal from "@/components/ProjectModal";
+import ProjectModal from "./ProjectModal";
 
 const ProjectImage = ({
   title,
@@ -28,7 +28,7 @@ const ProjectImage = ({
     >
       <div className="p-0" onClick={() => setIsShown(true)}>
         <div
-          className="relative w-80 lg:w-full md:w-80 sm:w-80 h-100
+          className="relative w-80 lg:w-full md:w-140 sm:w-80 h-100
             hover:cursor-pointer"
         >
           <Image

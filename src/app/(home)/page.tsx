@@ -1,12 +1,13 @@
 // import { prisma } from "@/db/prisma";
 
 // sections
-import Hero from "@/components/sections/Hero";
-import AboutMe from "@/components/sections/AboutMe";
-import Skills from "@/components/sections/Skills";
-import Experiences from "@/components/sections/Experiences";
-import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
+import HeroSection from "@/app/(home)/hero/components/HeroSection";
+import AboutMeSection from "@/app/(home)/about-me/components/AboutMeSection";
+import SkillsSection from "@/app/(home)/skills/components/SkillsSection";
+import EducationsSection from "@/app/(home)/educations/components/EducationsSection";
+import ExperiencesSection from "@/app/(home)/experiences/components/ExperiencesSection";
+import ProjectsSection from "@/app/(home)/projects/components/ProjectsSection";
+import ContactSection from "@/app/(home)/contact-me/components/ContactSection";
 
 export default async function Home() {
   // server component fetch (soon)
@@ -19,7 +20,7 @@ export default async function Home() {
           bg-radial from-zinc-300 to-zinc-400 to-100% dark:from-zinc-900
           dark:to-zinc-950 dark:to-100%"
       >
-        <Hero />
+        <HeroSection />
       </section>
 
       {/* about section */}
@@ -28,7 +29,7 @@ export default async function Home() {
           dark:bg-zinc-950"
         id="about"
       >
-        <AboutMe />
+        <AboutMeSection />
       </section>
 
       {/* skills section */}
@@ -36,7 +37,15 @@ export default async function Home() {
         className="w-full lg:h-screen flex justify-center items-center"
         id="skills"
       >
-        <Skills />
+        <SkillsSection />
+      </section>
+
+      {/*educations section*/}
+      <section
+        className="w-full lg:h-screen flex justify-center items-center"
+        id="educations"
+      >
+        <EducationsSection />
       </section>
 
       {/* experiences section  */}
@@ -44,17 +53,17 @@ export default async function Home() {
         className="w-full lg:h-screen flex justify-center items-center"
         id="experiences"
       >
-        <Experiences />
+        <ExperiencesSection />
       </section>
 
       {/* projects section */}
       <section className="w-full lg:h-screen" id="projects">
-        <Projects />
+        <ProjectsSection />
       </section>
 
       {/* contact me section */}
       <section className="w-full h-120" id="contact">
-        <Contact />
+        <ContactSection />
       </section>
     </>
   );
