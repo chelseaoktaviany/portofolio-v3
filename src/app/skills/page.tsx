@@ -10,7 +10,7 @@ import ReactJS from "@/svg/react-original.svg";
 import NodeJS from "@/svg/nodejs-plain.svg";
 import ReactNative from "@/svg/reactnative-original.svg";
 
-import SkillCard from "@/app/(landing)/skills/components/SkillCard";
+import SkillCard from "./components/SkillCard";
 
 export default async function SkillsPage() {
   // const skills = await prisma.skills.findMany({ orderBy: { order: "asc" } });
