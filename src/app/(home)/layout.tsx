@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 
-import "./globals.css";
+import "../globals.css";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",

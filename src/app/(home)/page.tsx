@@ -1,13 +1,13 @@
 // import { prisma } from "@/db/prisma";
 
 // sections
-import HeroSection from "@/app/hero/components/HeroSection";
-import AboutMeSection from "@/app/about-me/components/AboutMeSection";
-import SkillsSection from "@/app/skills/components/SkillsSection";
-import EducationsSection from "@/app/educations/components/EducationsSection";
-import ExperiencesSection from "@/app/experiences/components/ExperiencesSection";
-import ProjectsSection from "@/app/projects/components/ProjectsSection";
-import ContactSection from "@/app/contact-me/components/ContactSection";
+import HeroSection from "@/app/(home)/hero/components/HeroSection";
+import AboutMeSection from "@/app/(home)/about-me/components/AboutMeSection";
+import SkillsSection from "@/app/(home)/skills/components/SkillsSection";
+import EducationsSection from "@/app/(home)/educations/components/EducationsSection";
+import ExperiencesSection from "@/app/(home)/experiences/components/ExperiencesSection";
+import ProjectsSection from "@/app/(home)/projects/components/ProjectsSection";
+import ContactSection from "@/app/(home)/contact-me/components/ContactSection";
 
 export default async function Home() {
   // server component fetch (soon)
