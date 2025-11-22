@@ -3,12 +3,12 @@ import Link from "next/link";
 // components
 import { Button } from "@/components/ui/button";
 
-import ProjectImage from "@/components/ProjectImage";
+import ProjectImage from "./ProjectImage";
 
 // data
 import { projectsData } from "@/data/ProjectData";
 
-const Projects = () => {
+const ProjectsSection = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center mt-5">
       <h1
@@ -53,4 +53,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;

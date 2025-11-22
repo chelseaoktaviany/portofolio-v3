@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-const AboutUs = () => {
+const AboutMeSection = () => {
   return (
     <div
       className="w-full h-screen grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2
@@ -50,7 +50,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/* right content - image */}
-      <div className="relative hidden md:block sm:block">
+      <div className="relative hidden lg:block md:hidden sm:hidden">
         <Image
           className="w-full h-full object-cover brightness-70"
           src="/images/avatar.jpg"
@@ -62,4 +62,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutMeSection;
