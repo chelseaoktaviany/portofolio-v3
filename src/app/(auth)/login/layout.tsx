@@ -3,16 +3,17 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "../../globals.css";
-import React from "react";
 
 export const metadata: Metadata = {
-  title: "admin page - login",
-  description: "auth page",
+  title: "chel.dev - admin page",
+  description: "CMS for portofolio",
 };
 
-export default function AuthLayout({
+export default function AdminLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html className="scroll-smooth" lang="en" suppressHydrationWarning>
       <body className={"antialiased"}>
@@ -22,10 +23,10 @@ export default function AuthLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full min-h-screen">
+          <div className="font-sans w-full min-h-screen">
             <main
               className="flex flex-col row-start-2 items-center md:items-center
-                sm:items-start"
+                sm:items-center"
             >
               {children}
             </main>
