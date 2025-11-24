@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 // validations
-import { loginSchema } from "@/lib/validation";
+import { loginSchema } from "@/validators/auth";
 
 const LoginForm = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -54,16 +54,23 @@ const LoginForm = () => {
     // }
   };
 
-  const inputs = [
+  const inputs: Array<{
+    formName: "emailAddress" | "password";
+    label: string;
+    placeholder: string;
+    inputType: string;
+  }> = [
     {
       formName: "emailAddress",
       label: "E-mail address",
       placeholder: "Your e-mail address",
+      inputType: "email",
     },
     {
       formName: "password",
       label: "Password",
       placeholder: "Your password...",
+      inputType: "password",
     },
   ];
 
@@ -82,13 +89,14 @@ const LoginForm = () => {
                 name={item.formName}
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="lg:text-lg mb-4">
+                    <FormLabel className="lg:text-lg my-4">
                       {item.label}
                     </FormLabel>
                     <FormControl>
                       <Input
                         className="w-100 py-5 mb-2 not-focus:text-lg
                           focus:text-lg placeholder:text-lg"
+                        type={item.inputType}
                         placeholder={item.placeholder}
                         {...field}
                       />
@@ -111,7 +119,7 @@ const LoginForm = () => {
               </Button>
               <p className="mt-8 lg:text-lg">
                 Don&apos;t have an existing account?{" "}
-                <Link className="font-bold dark:text-zinc-200" href="#">
+                <Link className="font-bold dark:text-zinc-200" href="/register">
                   Sign up here
                 </Link>
               </p>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-import "../../globals.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "chel.dev - admin page",
