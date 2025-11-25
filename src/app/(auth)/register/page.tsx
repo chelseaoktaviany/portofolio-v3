@@ -1,0 +1,19 @@
+// components
+import RegisterForm from "../components/RegisterForm";
+
+const RegisterPage = () => {
+  return (
+    <div className="w-full h-screen flex justify-center items-center p-4">
+      <div
+        className="lg:w-200 lg:h-200 dark:bg-transparent border border-zinc-800
+          dark:border-zinc-200/30 flex flex-col justify-center items-center
+          px-10 py-5 rounded-xl"
+      >
+        <h1 className="lg:text-2xl font-bold py-5">Sign Up</h1>
+        <RegisterForm />
+      </div>
+    </div>
+  );
+};
+
+export default RegisterPage;
