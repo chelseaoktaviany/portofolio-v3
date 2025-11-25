@@ -89,13 +89,13 @@ const LoginForm = () => {
                 name={item.formName}
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="lg:text-lg my-4">
+                    <FormLabel className="lg:text-md my-4">
                       {item.label}
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="w-100 py-5 mb-2 not-focus:text-lg
-                          focus:text-lg placeholder:text-lg"
+                        className="w-100 py-5 mb-2 not-focus:text-md
+                          focus:text-md placeholder:text-md"
                         type={item.inputType}
                         placeholder={item.placeholder}
                         {...field}
@@ -110,7 +110,7 @@ const LoginForm = () => {
             <div className="flex flex-col justify-center items-center py-2 mt-2">
               <Button
                 className="w-full px-6 py-7 text-center dark:text-zinc-950
-                  dark:bg-zinc-100/80 text-rounded lg:text-lg tracking-wider
+                  dark:bg-zinc-100/80 text-rounded lg:text-md tracking-wider
                   dark:hover:bg-zinc-800 dark:hover:text-zinc-50
                   hover:cursor-pointer transition-colors"
                 type="submit"
