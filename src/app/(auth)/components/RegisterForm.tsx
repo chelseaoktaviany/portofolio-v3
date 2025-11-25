@@ -43,7 +43,6 @@ const RegisterForm = () => {
 
   const inputs: Array<{
     formName: "firstName" | "lastName";
-
     label: string;
     placeholder: string;
     inputType: string;
@@ -63,17 +62,11 @@ const RegisterForm = () => {
   ];
 
   const inputs2: Array<{
-    formName: "username" | "emailAddress" | "password" | "passwordConfirm";
+    formName: "emailAddress" | "password" | "passwordConfirm";
     label: string;
     placeholder: string;
     inputType: string;
   }> = [
-    {
-      formName: "username",
-      label: "Username",
-      placeholder: "Your username",
-      inputType: "text",
-    },
     {
       formName: "emailAddress",
       label: "E-mail address",

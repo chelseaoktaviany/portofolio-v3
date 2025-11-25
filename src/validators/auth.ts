@@ -22,13 +22,6 @@ export const registerSchema = z.object({
     .max(255, {
       message: "Your last name must not be above 255 characters",
     }),
-  username: z
-    .string()
-    .min(4, { message: "Your username must be at least 4 characters" })
-    .max(255, {
-      message: "Your username must not be above 255 characters",
-    })
-    .toLowerCase(),
   emailAddress: z
     .email({ message: "Your e-mail address is invalid" })
     .toLowerCase(),
