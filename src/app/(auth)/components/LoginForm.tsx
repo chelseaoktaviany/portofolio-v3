@@ -1,6 +1,8 @@
 "use client";
 
 // libraries
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -22,7 +24,13 @@ import { Input } from "@/components/ui/input";
 // validations
 import { loginSchema } from "@/validators/auth";
 
+// libraries
+import { apiFetch } from "@/lib/api";
+
 const LoginForm = () => {
+  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
+
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -32,26 +40,26 @@ const LoginForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof loginSchema>) => {
-    console.log(values);
+    setError(null);
 
-    // e.preventDefault();
+    try {
+      const res = await apiFetch("/api/auth/register", {
+        method: "POST",
+        body: JSON.stringify(values),
+      });
 
-    // const formData = new FormData(e.currentTarget);
-    // const emailAddress = formData.get("emailAddress");
-    // const password = formData.get("password");
+      if (!res.ok) {
+        const { message } = await res.json();
+        setError(message || "Failed to log in");
 
-    // const res = await fetch(`${process.env.BASE_URL}/api/auth/login`, {
-    //   method: "POST",
-    //   headers: { ContentType: "application/json" },
-    //   body: JSON.stringify({ emailAddress, password }),
-    // });
+        return;
+      }
 
-    // if (res.ok) {
-    //   // router.push("/dashboard");
-    //   console.log("logged in!");
-    // } else {
-    //   // handle error
-    // }
+      router.push("/dashboard");
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   const inputs: Array<{
@@ -106,6 +114,11 @@ const LoginForm = () => {
                 )}
               />
             ))}
+
+            {/*error message*/}
+            {error && (
+              <p className="text-red-500 text-sm text-center">{error}</p>
+            )}
 
             <div className="flex flex-col justify-center items-center py-2 mt-2">
               <Button

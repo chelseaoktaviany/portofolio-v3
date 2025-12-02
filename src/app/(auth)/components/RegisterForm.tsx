@@ -1,6 +1,8 @@
 "use client";
 
 // libraries
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -22,7 +24,13 @@ import { Input } from "@/components/ui/input";
 // validations
 import { registerSchema } from "@/validators/auth";
 
+// libraries
+import { apiFetch } from "@/lib/api";
+
 const RegisterForm = () => {
+  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
+
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -35,9 +43,26 @@ const RegisterForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof registerSchema>) => {
-    console.log(values);
+    setError(null);
 
-    console.log("tested");
+    try {
+      const res = await apiFetch("/api/auth/register", {
+        method: "POST",
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        const { message } = await res.json();
+        setError(message || "Failed to register");
+
+        return;
+      }
+
+      router.push("/dashboard");
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   const inputs: Array<{
@@ -148,6 +173,9 @@ const RegisterForm = () => {
               ))}
             </div>
           </div>
+
+          {/*error message*/}
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
           <div className="flex flex-col justify-center items-center py-2 mt-2">
             <Button
