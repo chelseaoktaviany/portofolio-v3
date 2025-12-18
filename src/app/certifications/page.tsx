@@ -1,4 +1,4 @@
-// import api
+// import data
 
 const CertificationsPage = () => {
   return <div>Certification Page</div>;
