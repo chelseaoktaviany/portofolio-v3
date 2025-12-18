@@ -10,7 +10,11 @@ import { projectsData } from "@/data/ProjectData";
 
 const ProjectsSection = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center mt-5">
+    <div
+      className="w-full flex flex-col justify-center lg:justify-center
+        md:justify-center sm:justify-center lg:items-center md:items-center
+        sm:items-center mt-5"
+    >
       <h1
         className="text-3xl lg:text-6xl md:text-5xl sm:text-4xl text-center
           md:text-center sm:text-center font-bold
@@ -20,8 +24,8 @@ const ProjectsSection = () => {
       </h1>
       {/*projects list */}
       <div
-        className="w-8xl grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1
-          sm:grid-cols-1 gap-10"
+        className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1
+          gap-6 justify-center items-center px-10"
       >
         {projectsData.map((item) => (
           <ProjectImage
