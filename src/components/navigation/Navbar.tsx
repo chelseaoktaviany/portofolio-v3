@@ -75,7 +75,7 @@ const Navbar = () => {
           className="my-5 text-2xl tracking-wide
             font-(family-name:--font-archivo-black)"
         >
-          <Link href="#">ch.</Link>
+          <Link href="/">ch.</Link>
         </span>
 
         {/* link items (desktop version) */}

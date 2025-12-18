@@ -40,7 +40,7 @@ const SkillsSection = () => {
             hover:cursor-pointer"
           variant="ghost"
         >
-          <Link href="#">More skills</Link>
+          <Link href="/skills">More skills</Link>
         </Button>
       </div>
     </div>
