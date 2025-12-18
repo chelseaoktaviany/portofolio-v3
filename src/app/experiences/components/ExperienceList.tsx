@@ -18,12 +18,12 @@ const ExperienceList = ({
   return (
     <>
       <div
-        className="w-85 lg:w-full md:w-full sm:w-100 px-4 py-2 my-10 bg-zinc-300
+        className="w-85 lg:w-full md:w-full sm:w-120 px-4 py-2 my-10 bg-zinc-300
           dark:bg-zinc-800 rounded-md"
       >
         <button
           onClick={onToggle}
-          className="w-full lg:w-full md:w-full sm:w-100 flex justify-between
+          className="w-full lg:w-full md:w-full sm:w-120 flex justify-between
             items-center px-3 py-4 text-left font-bold"
         >
           <span className="text-lg truncate">
