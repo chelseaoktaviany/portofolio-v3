@@ -38,24 +38,12 @@ const Navbar = () => {
     },
     {
       id: 2,
-      name: "educations",
-      href: "#educations",
-      className: classNames,
-    },
-    {
-      id: 3,
-      name: "experiences",
-      href: "#experiences",
-      className: classNames,
-    },
-    {
-      id: 4,
       name: "projects",
       href: "#projects",
       className: classNames,
     },
     {
-      id: 5,
+      id: 3,
       name: "contacts",
       href: "#contacts",
       className: classNames,
