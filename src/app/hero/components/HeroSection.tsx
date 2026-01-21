@@ -5,13 +5,13 @@ const HeroSection = () => {
         py-2 text-center lg:text-center md:text-center sm:text-center"
     >
       <h1
-        className="text-2xl lg:text-5xl md:text-5xl sm:text-xl font-bold
+        className="text-2xl lg:text-7xl md:text-5xl sm:text-xl font-bold
           font-(family-name:--font-archivo-black) my-5"
       >
         Chelsea Oktaviany
       </h1>
       <h2
-        className="text-xs lg:text-2xl md:text-2xl sm:text-md font-light
+        className="text-xs lg:text-4xl md:text-2xl sm:text-md font-light
           font-(family-name:--font-pontano-sans"
       >
         Fullstack Developer | linkedin.com/in/chelseaoktaviany

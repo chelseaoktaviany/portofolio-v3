@@ -1,11 +1,7 @@
-// import { prisma } from "@/db/prisma";
-
 // sections
 import HeroSection from "@/app/hero/components/HeroSection";
 import AboutMeSection from "@/app/about-me/components/AboutMeSection";
 import SkillsSection from "@/app/skills/components/SkillsSection";
-import EducationsSection from "@/app/educations/components/EducationsSection";
-import ExperiencesSection from "@/app/experiences/components/ExperiencesSection";
 import ProjectsSection from "@/app/projects/components/ProjectsSection";
 import ContactSection from "@/app/contact-me/components/ContactSection";
 
@@ -15,11 +11,7 @@ export default async function Home() {
   return (
     <>
       {/* intro section */}
-      <section
-        className="w-full min-h-screen flex justify-center items-center
-          bg-radial from-zinc-300 to-zinc-400 to-100% dark:from-zinc-900
-          dark:to-zinc-950 dark:to-100%"
-      >
+      <section className="w-full min-h-screen flex justify-center items-center">
         <HeroSection />
       </section>
 
@@ -38,22 +30,6 @@ export default async function Home() {
         id="skills"
       >
         <SkillsSection />
-      </section>
-
-      {/*educations section*/}
-      <section
-        className="w-full lg:h-screen flex justify-center items-center"
-        id="educations"
-      >
-        <EducationsSection />
-      </section>
-
-      {/* experiences section  */}
-      <section
-        className="w-full lg:h-screen flex justify-center items-center"
-        id="experiences"
-      >
-        <ExperiencesSection />
       </section>
 
       {/* projects section */}
