@@ -3,8 +3,11 @@ import { Archivo_Black, Pontano_Sans, Afacad } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
+// components
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
+import Loading from "@/components/loading";
+import FadeIn from "@/components/fadeIn";
 
 import "./globals.css";
 
@@ -51,9 +54,12 @@ export default function RootLayout({
               className="flex flex-col row-start-2 items-center md:items-center
                 sm:items-start"
             >
-              <Navbar />
-              {children}
-              <Footer />
+              <Loading />
+              <FadeIn>
+                <Navbar />
+                {children}
+                <Footer />
+              </FadeIn>
             </main>
           </div>
         </ThemeProvider>
