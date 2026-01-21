@@ -26,7 +26,7 @@ const Loading = () => {
   return (
     <div
       className={`fixed inset-0 z-[9999] flex items-center justify-center
-        bg-zinc-200 dark:bg-black transition-opacity duration-700
+        bg-white dark:bg-black transition-opacity duration-700
         ${fadeOut ? "opacity-0" : "opacity-100"}`}
     >
       <div className="flex flex-col items-center gap-4">
