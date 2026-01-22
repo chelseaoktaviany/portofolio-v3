@@ -14,18 +14,8 @@ import {
 import ProjectBtn from "./ProjectBtn";
 import ProjectTag from "./ProjectTag";
 
-interface ProjectModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  title: string;
-  projectDescription: string;
-  projectLink: string;
-  demoLink: string;
-  techStack: string[];
-  projectImage?: string;
-  startDate: string;
-  endDate: string;
-}
+//types
+import { ProjectModalProps } from "@/types/projectModal";
 
 const ProjectModal = ({
   open,

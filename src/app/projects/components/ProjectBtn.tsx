@@ -14,7 +14,7 @@ const ProjectBtn = ({ href, onClick, children, variant }: ButtonProps) => {
     default:
       "border-zinc-950 dark:border-zinc-50 hover:bg-zinc-800 dark:hover:bg-zinc-50/5 dark:hover:text-zinc-50",
     ghost:
-      "border-zinc-950 dark:border-zinc-50 hover:bg-zinc-950/5 dark:hover:bg-zinc-50/5",
+      "border border-zinc-950 dark:border-zinc-50 hover:bg-zinc-950/5 dark:hover:bg-zinc-50/5",
   };
 
   const variantStyles =
@@ -25,9 +25,11 @@ const ProjectBtn = ({ href, onClick, children, variant }: ButtonProps) => {
         : "";
 
   if (href) {
-    <Button className={`${baseStyles} ${variantStyles}`} variant={variant}>
-      <Link href={href}>{children}</Link>
-    </Button>;
+    return (
+      <Button className={`${baseStyles} ${variantStyles}`} variant={variant}>
+        <Link href={href}>{children}</Link>
+      </Button>
+    );
   }
 
   return (
