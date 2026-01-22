@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // components
-import { Button } from "@/components/ui/button";
+import Btn from "@/components/button";
 
 import ProjectImage from "./ProjectImage";
 
@@ -44,14 +44,9 @@ const ProjectsSection = () => {
 
       {/* more projects button */}
       <div className="flex justify-center py-8 my-10">
-        <Button
-          className="w-80 lg:w-50 h-18 px-10 py-6 border border-zinc-950
-            dark:border-zinc-50 hover:bg-zinc-300/30 dark:hover:bg-zinc-50/10
-            tracking-wider transition-colors uppercase hover:cursor-pointer"
-          variant="ghost"
-        >
-          <Link href="#">More projects</Link>
-        </Button>
+        <Btn variant="ghost">
+          <Link href="/projects">More projects</Link>
+        </Btn>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-
+// components
+import Btn from "@/components/button";
 import SkillCard from "./SkillCard";
 
 // data
@@ -33,15 +33,9 @@ const SkillsSection = () => {
 
       {/* more skills button */}
       <div className="py-8 my-10">
-        <Button
-          className="w-full lg:w-50 md:w-full sm:w-full h-18 px-10 py-6 border
-            border-zinc-950 dark:border-zinc-50 hover:bg-zinc-300/30
-            dark:hover:bg-zinc-50/10 tracking-wider transition-colors uppercase
-            hover:cursor-pointer"
-          variant="ghost"
-        >
-          <Link href="/skills">More skills</Link>
-        </Button>
+        <Btn variant="ghost">
+          <Link href="#">More skills</Link>
+        </Btn>
       </div>
     </div>
   );

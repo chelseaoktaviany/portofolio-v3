@@ -4,7 +4,6 @@ import Image from "next/image";
 import moment from "moment";
 
 // components
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -12,6 +11,8 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import ProjectBtn from "./ProjectBtn";
+import ProjectTag from "./ProjectTag";
 
 interface ProjectModalProps {
   open: boolean;
@@ -67,41 +68,21 @@ const ProjectModal = ({
 
         <div className="mt-4 flex flex-wrap justify-center items-center gap-2">
           {techStack.map((item, index) => (
-            <span
-              key={index}
-              className="text-xs bg-zinc-50/10 dark:bg-zinc-700/30 px-3 py-2
-                rounded-full tracking-wider"
-            >
-              {item}
-            </span>
+            <ProjectTag key={index}>{item}</ProjectTag>
           ))}
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 py-3">
           {demoLink && (
-            <Button
-              asChild
-              className="w-full lg:w-50 md:w-50 sm:w-full px-5 py-5 border
-                border-zinc-950 dark:border-zinc-50 hover:bg-zinc-800
-                dark:hover:bg-zinc-50/5 dark:hover:text-zinc-50 tracking-wider
-                transition-colors text-zinc-50 text-center uppercase"
-              variant="secondary"
-            >
+            <ProjectBtn asChild variant="default">
               <Link href={demoLink}>demo link</Link>
-            </Button>
+            </ProjectBtn>
           )}
 
           {projectLink && (
-            <Button
-              asChild
-              className="w-full lg:w-50 md:w-50 sm:w-full px-6 py-5 border
-                border-zinc-950 dark:border-zinc-50 hover:bg-zinc-950/5
-                dark:hover:bg-zinc-50/5 tracking-wider transition-colors
-                text-center uppercase"
-              variant="outline"
-            >
+            <ProjectBtn asChild variant="ghost">
               <Link href={projectLink}>project link</Link>
-            </Button>
+            </ProjectBtn>
           )}
         </div>
       </DialogContent>

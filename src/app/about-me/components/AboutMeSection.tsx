@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+// components
+import Btn from "@/components/button";
 
 const AboutMeSection = () => {
   return (
@@ -12,8 +13,7 @@ const AboutMeSection = () => {
       {/* left content */}
       <div
         className="flex flex-col justify-center px-10 md:px-20 space-y-6
-          text-zinc-950 dark:text-zinc-50 text-center xl:text-start
-          lg:text-start md:text-center sm:text-center"
+          text-center xl:text-start lg:text-start md:text-center sm:text-center"
       >
         <h1
           className="text-3xl lg:text-xxl md:text-6xl sm:text-4xl font-bold
@@ -37,16 +37,9 @@ const AboutMeSection = () => {
           className="flex space-x-5 lg:justify-start md:justify-center
             sm:justify-center"
         >
-          <Button
-            className="w-full lg:w-50 md:w-full sm:w-full h-15 my-8 px-3 py-5
-              tracking-wider bg-zinc-950 dark:bg-zinc-200 hover:bg-zinc-600
-              dark:hover:bg-zinc-800 text-zinc-100 dark:text-zinc-900
-              hover:text-zinc-100 dark:hover:text-zinc-50 transition uppercase
-              text-center"
-            variant="default"
-          >
-            <Link href="#contact">let&apos;s connect</Link>
-          </Button>
+          <Btn variant="default">
+            <Link href="#contact">Connect me</Link>
+          </Btn>
         </div>
       </div>
       {/* right content - image */}
