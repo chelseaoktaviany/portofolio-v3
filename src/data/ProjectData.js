@@ -17,7 +17,7 @@ export const projectsData = [
     title: "Personal Website",
     projectDescription:
       "An external project is to build a web application for personal includes about, experiences, skills, projects and contact. This project is done by myself as a Web Developer.",
-    demoLink: "http://chel-dev.netlify.app/",
+    demoLink: "#",
     projectLink: "https://github.com/chelseaoktaviany/portfolio-chelsea",
     techStack: ["HTML", "CSS", "JS", "Bootstrap", "Netlify"],
     projectImage: "/images/projects/project3.png",
