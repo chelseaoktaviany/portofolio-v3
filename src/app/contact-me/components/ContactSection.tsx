@@ -32,10 +32,16 @@ const ContactSection = () => {
         >
           <Mail className={classNameIcons} />
         </Link>
-        <Link href="https://www.github.com/chelseaoktaviany">
+        <Link
+          href="https://www.github.com/chelseaoktaviany"
+          className="hover:text-primary transition-colors"
+        >
           <GitHub className={classNameIcons} />
         </Link>
-        <Link href="https://www.linkedin.com/in/chelseaoktaviany">
+        <Link
+          href="https://www.linkedin.com/in/chelseaoktaviany"
+          className="hover:text-primary transition-colors"
+        >
           <LinkedIn className={classNameIcons} />
         </Link>
       </div>

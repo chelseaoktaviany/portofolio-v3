@@ -33,15 +33,22 @@ const AboutMeSection = () => {
           technologies. Feel free to look at my CV.
         </p>
 
+        {/*buttons*/}
         <div
-          className="flex space-x-5 lg:justify-start md:justify-center
-            sm:justify-center"
+          className="space-x-5 space-y-4 justify-center lg:justify-start
+            md:justify-center"
         >
           <Btn variant="default">
+            <Link href="/pdf/chelsea-resume.pdf" target="_blank" download>
+              Download CV
+            </Link>
+          </Btn>
+          <Btn variant="ghost">
             <Link href="#contact">Connect me</Link>
           </Btn>
         </div>
       </div>
+
       {/* right content - image */}
       <div className="relative hidden lg:block md:hidden sm:hidden">
         <Image
