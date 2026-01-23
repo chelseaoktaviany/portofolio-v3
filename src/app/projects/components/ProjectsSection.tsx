@@ -45,7 +45,7 @@ const ProjectsSection = () => {
       {/* more projects button */}
       <div className="flex justify-center py-8 my-10">
         <Btn variant="ghost">
-          <Link href="/projects">More projects</Link>
+          <Link href="#">More projects</Link>
         </Btn>
       </div>
     </div>
