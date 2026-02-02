@@ -3,7 +3,7 @@ export const projectsData = [
     id: 0,
     title: "CMS Puskesmas",
     projectDescription:
-      "A project is to build a Content Management System web application for doctors, patients, and admins including login, register session, and dashboard. The web application implemented CRUD (Create, Read, Update and Delete) operation. This project is done by myself as Web Developer",
+      "A project is to build a Content Management System web application for doctors, patients, and admins including login, register session, and dashboard. The web application implemented CRUD (Create, Read, Update and Delete) operation. This project is done by myself as Web Developer.",
     projectLink: "https://github.com/chelseaoktaviany/cms-puskesmas",
     demoLink: "#",
     techStack: ["HTML", "CSS", "JS", "PHP", "Bootstrap", "MySQL"],
@@ -29,7 +29,7 @@ export const projectsData = [
     id: 2,
     title: "Sushiku",
     projectDescription:
-      "A project is to build a web application for restaurant including sign in,registration, food menu, and etc. This project is currently working in progress by myself as a Web Developer",
+      "A project is to build a web application for restaurant including sign in,registration, food menu, and etc. This project is currently working in progress by myself as a Web Developer.",
     demoLink: "#",
     projectLink: "https://github.com/chelseaoktaviany/sushiku",
     techStack: [
