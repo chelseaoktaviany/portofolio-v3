@@ -1,4 +1,4 @@
-export interface ProjectImageProps {
+export interface ProjectCardProps {
   title: string;
   projectDescription: string;
   projectLink: string;

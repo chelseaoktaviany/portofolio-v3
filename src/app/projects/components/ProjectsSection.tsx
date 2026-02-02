@@ -3,7 +3,7 @@ import Link from "next/link";
 // components
 import Btn from "@/components/button";
 
-import ProjectImage from "./ProjectImage";
+import ProjectCard from "./ProjectCard";
 
 // data
 import { projectsData } from "@/data/ProjectData";
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
           gap-6 justify-center items-center px-10"
       >
         {projectsData.map((item) => (
-          <ProjectImage
+          <ProjectCard
             key={item.id}
             title={item.title}
             projectDescription={item.projectDescription}
