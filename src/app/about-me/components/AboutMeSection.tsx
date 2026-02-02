@@ -35,7 +35,7 @@ const AboutMeSection = () => {
 
         {/*buttons*/}
         <div
-          className="space-x-5 space-y-4 justify-center lg:justify-start
+          className="lg:space-x-2 space-y-4 justify-center lg:justify-start
             md:justify-center"
         >
           <Btn variant="default">
