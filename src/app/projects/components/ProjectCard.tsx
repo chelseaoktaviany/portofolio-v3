@@ -21,7 +21,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-// import ProjectModal from "./ProjectModal";
 import ProjectTag from "./ProjectTag";
 
 const ProjectCard = ({
@@ -39,7 +38,7 @@ const ProjectCard = ({
 
   return (
     <Card size="sm" className="mx-auto w-full max-w-sm">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35">
+      {/* <div className="absolute inset-0 z-30 aspect-video bg-black/35">
         <Image
           fill
           className="relative z-20 aspect-video w-full object-cover
@@ -47,10 +46,15 @@ const ProjectCard = ({
           src={projectImage || `/images/placeholder300x100.png`}
           alt={title}
         />
-      </div>
+      </div> */}
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{projectDescription}</CardDescription>
+        <CardDescription>
+          <p className="py-2 text-muted-foreground italic">
+            {monthYearStart} - {monthYearEnd}
+          </p>
+          <p>{projectDescription}</p>
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-3">
         {techStack.map((item, index) => (
