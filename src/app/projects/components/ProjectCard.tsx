@@ -37,7 +37,7 @@ const ProjectCard = ({
   const monthYearEnd = moment(endDate).format("MMMM YYYY");
 
   return (
-    <Card size="sm" className="mx-auto w-full max-w-sm">
+    <Card className="mx-auto w-full max-w-sm">
       {/* <div className="absolute inset-0 z-30 aspect-video bg-black/35">
         <Image
           fill
