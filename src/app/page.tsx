@@ -38,7 +38,7 @@ export default async function Home() {
       </section>
 
       {/* contact me section */}
-      <section className="w-full h-120" id="contact">
+      <section className="w-full h-80 justify-center items-center" id="contact">
         <ContactSection />
       </section>
     </>

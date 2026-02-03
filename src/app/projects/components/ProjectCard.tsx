@@ -71,7 +71,9 @@ const ProjectCard = ({
             {monthYearStart} -{" "}
             {endDate === "Present" || endDate === "" ? "Present" : monthYearEnd}
           </p>
-          <p className="text-warp text-justify">{projectDescription}</p>
+          <p className="text-wrap text-justify whitespace-normal">
+            {projectDescription}
+          </p>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-3">
@@ -88,7 +90,7 @@ const ProjectCard = ({
             btn.href && (
               <Button
                 key={btn.label}
-                className={"w-full lg:w-40 md:w-full sm:w-full uppercase"}
+                className={"w-full lg:w-30 md:w-full sm:w-full uppercase"}
                 variant={btn.variant}
               >
                 <Link

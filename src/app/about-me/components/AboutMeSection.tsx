@@ -12,7 +12,7 @@ const AboutMeSection = () => {
     >
       {/* left content */}
       <div
-        className="flex flex-col justify-center px-10 md:px-20 space-y-6
+        className="flex flex-col justify-center px-10 md:px-10 space-y-6
           text-center xl:text-start lg:text-start md:text-center sm:text-center"
       >
         <h1
@@ -22,7 +22,7 @@ const AboutMeSection = () => {
           Hello,
         </h1>
         <p
-          className="lg:text-2xl md:text-base leading-10 font-light
+          className="lg:text-xl leading-10 font-light
             font-(family-name:--font-pontano-sans)"
         >
           I am a fresh graduate in Computer Science with 1 year of experience in
@@ -36,7 +36,7 @@ const AboutMeSection = () => {
         {/*buttons*/}
         <div
           className="lg:space-x-2 space-y-4 justify-center lg:justify-start
-            md:justify-center"
+            md:justify-center sm:justify-center"
         >
           <Btn variant="default">
             <Link href="/pdf/chelsea-resume.pdf" target="_blank" download>

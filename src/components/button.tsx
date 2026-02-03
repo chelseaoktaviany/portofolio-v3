@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Btn = ({ href, onClick, children, variant }: ButtonProps) => {
   const baseStyles =
-    "w-80 lg:w-50 md:w-full sm:w-full h-12 px-10 py-4 tracking-wider uppercase text-center transition-colors hover:cursor-pointer";
+    "w-full lg:w-50 md:w-full sm:w-full h-12 px-10 py-4 tracking-wider uppercase text-center transition-colors hover:cursor-pointer";
 
   const variants = {
     default:

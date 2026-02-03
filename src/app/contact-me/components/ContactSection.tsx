@@ -9,18 +9,21 @@ const classNameIcons = "text-2xl lg:!text-4xl md:!text-3xl sm:!text-2xl";
 
 const ContactSection = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center px-5 my-5">
+    <div
+      className="w-full flex flex-col justify-center items-center px-5 py-8
+        my-18"
+    >
       <h1
-        className="text-3xl lg:text-6xl md:text-5xl sm:text-4xl text-center
+        className="text-xl lg:text-4xl md:text-3xl sm:text-2xl text-center
           md:text-center sm:text-center font-bold
           font-(family-name:--font-archivo-black) py-10"
       >
         Let&apos;s connect
       </h1>
       <p
-        className="text-md lg:text-2xl text-muted-foreground text-center
-          md:text-center sm:text-center font-light italic
-          font-(family-name:--font-pontano-sans) py-0"
+        className="text-xs lg:text-xl md:text-md sm:text-sm
+          text-muted-foreground text-center md:text-center sm:text-center
+          font-light italic font-(family-name:--font-pontano-sans) py-0"
       >
         I&apos;d love to hear from you! Feel free to reach out through this
         form, or find me on social media below.

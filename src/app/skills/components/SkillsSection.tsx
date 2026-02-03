@@ -9,7 +9,7 @@ import { skillLists } from "@/data/SkillData";
 
 const SkillsSection = () => {
   return (
-    <div className="flex flex-col justify-center lg:items-center mt-5">
+    <div className="flex flex-col justify-center items-center my-5">
       <h1
         className="text-3xl lg:text-6xl md:text-4xl sm:text-4xl text-center
           md:text-center sm:text-center font-bold
@@ -19,15 +19,11 @@ const SkillsSection = () => {
       </h1>
       {/* skills list */}
       <div
-        className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-4
-          md:grid-cols-3 sm:grid-cols-2 gap-10"
+        className="max-w-6xl w-full grid grid-cols-1 2xl:grid-cols-6 xl:
+          lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-10"
       >
         {skillLists.map((item) => (
-          <SkillCard
-            key={item.id}
-            skillTitle={item.skillTitle}
-            icon={item.icon}
-          />
+          <SkillCard key={item.id} icon={item.icon} />
         ))}
       </div>
 
