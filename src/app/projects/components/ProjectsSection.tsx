@@ -2,7 +2,6 @@ import Link from "next/link";
 
 // components
 import Btn from "@/components/button";
-
 import ProjectCard from "./ProjectCard";
 
 // data
