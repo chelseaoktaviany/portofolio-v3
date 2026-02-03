@@ -9,11 +9,7 @@ const SkillsPage = () => {
         <h1 className="text-5xl font-semibold my-2 py-6">Skills</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           {skillLists.map((item) => (
-            <SkillCard
-              key={item.id}
-              skillTitle={item.skillTitle}
-              icon={item.icon}
-            />
+            <SkillCard key={item.id} icon={item.icon} />
           ))}
         </div>
       </div>
