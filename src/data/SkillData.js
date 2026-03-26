@@ -17,6 +17,10 @@ import Git from "@/svg/git-plain.svg";
 import Bootstrap from "@/svg/bootstrap-plain.svg";
 import Heroku from "@/svg/heroku-plain.svg";
 import Figma from "@/svg/figma-plain.svg";
+import TypeScript from "@/svg/typescript-plain.svg";
+import Sequelize from "@/svg/sequelize-plain.svg";
+import Postman from "@/svg/postman-plain.svg";
+import Prisma from "@/svg/prisma-original.svg";
 
 export const skillLists = [
   {
@@ -108,5 +112,25 @@ export const skillLists = [
     id: 18,
     skillTitle: "Figma",
     icon: Figma,
+  },
+  {
+    id: 19,
+    skillTitle: "TypeScript",
+    icon: TypeScript,
+  },
+  {
+    id: 20,
+    skillTitle: "Sequelize",
+    icon: Sequelize,
+  },
+  {
+    id: 21,
+    skillTitle: "Postman",
+    icon: Postman,
+  },
+  {
+    id: 22,
+    skillTitle: "Prisma",
+    icon: Prisma,
   },
 ];

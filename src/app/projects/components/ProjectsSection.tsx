@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+import { useState } from "react";
 
 // components
 import Btn from "@/components/button";
@@ -8,6 +9,12 @@ import ProjectCard from "./ProjectCard";
 import { projectsData } from "@/data/ProjectData";
 
 const ProjectsSection = () => {
+  const [visible, setVisible] = useState(3);
+
+  const setMoreProjects = () => {
+    setVisible((prev) => prev + 4);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mt-5">
       <h1
@@ -22,7 +29,7 @@ const ProjectsSection = () => {
         className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1
           gap-6 justify-center items-center px-10"
       >
-        {projectsData.map((item) => (
+        {projectsData.slice(0, visible).map((item) => (
           <ProjectCard
             key={item.id}
             title={item.title}
@@ -39,9 +46,11 @@ const ProjectsSection = () => {
 
       {/* more projects button */}
       <div className="flex justify-center py-8 my-10">
-        <Btn variant="ghost">
-          <Link href="#">More projects</Link>
-        </Btn>
+        {visible < projectsData.length && (
+          <Btn variant="ghost" onClick={setMoreProjects}>
+            More projects
+          </Btn>
+        )}
       </div>
     </div>
   );

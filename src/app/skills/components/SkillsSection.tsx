@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 
 // components
 import Btn from "@/components/button";
@@ -8,12 +10,18 @@ import SkillCard from "./SkillCard";
 import { skillLists } from "@/data/SkillData";
 
 const SkillsSection = () => {
+  const [visible, setVisible] = useState(12);
+
+  const setMoreSkills = () => {
+    setVisible((prev) => prev + 6); // show 4 more
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center my-5">
+    <div className="flex flex-col justify-center items-center mt-18">
       <h1
         className="text-3xl lg:text-6xl md:text-4xl sm:text-4xl text-center
           md:text-center sm:text-center font-bold
-          font-(family-name:--font-archivo-black) py-10 mb-10"
+          font-(family-name:--font-archivo-black) py-10 my-10"
       >
         Tools & Skills
       </h1>
@@ -22,16 +30,18 @@ const SkillsSection = () => {
         className="max-w-6xl w-full grid grid-cols-1 2xl:grid-cols-6 xl:
           lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-10"
       >
-        {skillLists.map((item) => (
+        {skillLists.slice(0, visible).map((item) => (
           <SkillCard key={item.id} icon={item.icon} />
         ))}
       </div>
 
       {/* more skills button */}
       <div className="py-8 my-10">
-        <Btn variant="ghost">
-          <Link href="#">More skills</Link>
-        </Btn>
+        {visible < skillLists.length && (
+          <Btn variant="ghost" onClick={setMoreSkills}>
+            More skills
+          </Btn>
+        )}
       </div>
     </div>
   );
