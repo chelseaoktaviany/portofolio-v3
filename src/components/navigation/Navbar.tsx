@@ -4,8 +4,6 @@ import { useState } from "react";
 
 import Link from "next/link";
 
-import { Button } from "@mui/material";
-
 import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -52,7 +50,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="w-full fixed z-[9999] bg-transparent top-0 backdrop-blur-sm
+      className="w-full fixed z-9999 bg-transparent top-0 backdrop-blur-sm
         border-b border-zinc-950/5 dark:border-zinc-50/5"
     >
       <nav
@@ -81,7 +79,7 @@ const Navbar = () => {
         </ul>
 
         {/* dark mode button (desktop version) */}
-        <Button
+        <button
           className="hidden md:flex sm:hidden p-2 rounded-full
             hover:bg-zinc-950/5 dark:hover:bg-zinc-50/5 transition-colors"
           onClick={handleDarkMode}
@@ -89,42 +87,49 @@ const Navbar = () => {
           <span className="text-lg text-zinc-950 dark:text-zinc-50">
             {isDark ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
           </span>
-        </Button>
+        </button>
       </nav>
 
       <div
-        className="md:hidden flex justify-between items-center px-2 py-5 mb-2"
+        className="md:hidden flex justify-between items-center my-4 px-8 py-2
+          mb-2"
       >
+        <span
+          className="text-2xl tracking-wide
+            font-(family-name:--font-archivo-black)"
+        >
+          <Link href="/">ch.</Link>
+        </span>
+
         {/* dark mode button (mobile version) */}
-        <Button
-          className="mt-4 text-zinc-900 dark:text-zinc-50"
+        <button
+          className="text-zinc-900 dark:text-zinc-50"
           onClick={handleDarkMode}
         >
           <span className="text-lg text-zinc-950 dark:text-zinc-50">
             {isDark ? <WbSunnyOutlinedIcon /> : <BedtimeOutlinedIcon />}
           </span>
-        </Button>
+        </button>
 
         {/* menu item button (mobile version) */}
-        <Button
-          className="md:hidden float-right text-zinc-900 dark:text-zinc-50"
+        <button
+          className="md:hidden text-zinc-900 dark:text-zinc-50"
           onClick={() => setIsOpenMenu(!isOpenMenu)}
         >
-          <span className="text-lg text-zinc-950 dark:text-zinc-50">
+          <span className="text-center text-lg text-zinc-950 dark:text-zinc-50">
             {isOpenMenu ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
           </span>
-        </Button>
+        </button>
       </div>
 
       {/* mobile menu items */}
       {isOpenMenu && (
-        <div
-          className="md:hidden h-screen bg-zinc-50/90 dark:bg-zinc-900/90 px-8
-            py-15"
-        >
-          <ul className="flex flex-col gap-4 text-zinc-950 dark:text-zinc-50">
+        <div className="md:hidden h-screen bg-zinc-50/90 dark:bg-zinc-900/90">
+          <ul
+            className="flex flex-col px-8 py-2 text-zinc-950 dark:text-zinc-50"
+          >
             {linkItem.map((item) => (
-              <li key={item.id}>
+              <li className="py-2" key={item.id}>
                 <Link
                   href={item.href}
                   className="hover:text-zinc-950 dark:hover:text-zinc-50
