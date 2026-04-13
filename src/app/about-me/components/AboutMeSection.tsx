@@ -4,6 +4,9 @@ import Link from "next/link";
 // components
 import Btn from "@/components/button";
 
+// icons
+import ArrowOutwardOutlinedIcon from "@mui/icons-material/ArrowOutwardOutlined";
+
 const AboutMeSection = () => {
   return (
     <div
@@ -39,8 +42,9 @@ const AboutMeSection = () => {
             md:justify-center sm:justify-center"
         >
           <Btn variant="default">
-            <Link href="/pdf/chelsea-resume.pdf" target="_blank" download>
-              Download CV
+            <Link href="/pdf/chelsea-resume.pdf" target="_blank">
+              View resume
+              <ArrowOutwardOutlinedIcon fontSize="medium" className="ml-2" />
             </Link>
           </Btn>
           <Btn variant="ghost">
