@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import Link from "next/link";
-
 import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -19,7 +17,7 @@ const Navbar = () => {
   };
 
   const classNames =
-    "px-4 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors cursor-pointer";
+    "px-4 font-normal duration-300 ease-in-out hover:font-bold transition-all cursor-pointer";
 
   const linkItem = [
     {
@@ -61,17 +59,17 @@ const Navbar = () => {
           className="my-5 text-2xl tracking-wide
             font-(family-name:--font-archivo-black)"
         >
-          <Link href="/">ch.</Link>
+          <a href="/">ch.</a>
         </span>
 
         {/* link items (desktop version) */}
         <ul
-          className="hidden md:flex space-x-10 text-xl text-zinc-950
-            dark:text-zinc-300 font-(family-name:--font-afacad)"
+          className="hidden md:flex space-x-10 text-xl
+            font-(family-name:--font-afacad)"
         >
           <li className="flex justify-center items-center">
             {linkItem.map((item) => (
-              <a key={item.id} href={item.href} className={item.className}>
+              <a key={item.id} className={item.className} href={item.href}>
                 {item.name}
               </a>
             ))}
@@ -98,7 +96,7 @@ const Navbar = () => {
           className="text-2xl tracking-wide
             font-(family-name:--font-archivo-black)"
         >
-          <Link href="/">ch.</Link>
+          <a href="/">ch.</a>
         </span>
 
         {/* dark mode button (mobile version) */}
@@ -125,20 +123,14 @@ const Navbar = () => {
       {/* mobile menu items */}
       {isOpenMenu && (
         <div className="md:hidden h-screen bg-zinc-50/90 dark:bg-zinc-900/90">
-          <ul
-            className="flex flex-col px-8 py-2 text-zinc-950 dark:text-zinc-50"
-          >
-            {linkItem.map((item) => (
-              <li className="py-2" key={item.id}>
-                <Link
-                  href={item.href}
-                  className="hover:text-zinc-950 dark:hover:text-zinc-50
-                    transition-colors"
-                >
+          <ul className="flex flex-col p-8">
+            <li className="flex flex-col">
+              {linkItem.map((item) => (
+                <a key={item.id} className="mb-5" href={item.href}>
                   {item.name}
-                </Link>
-              </li>
-            ))}
+                </a>
+              ))}
+            </li>
           </ul>
         </div>
       )}
