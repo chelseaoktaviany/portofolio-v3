@@ -9,10 +9,7 @@ const classNameIcons = "text-2xl lg:!text-4xl md:!text-3xl sm:!text-2xl";
 
 const ContactSection = () => {
   return (
-    <div
-      className="w-full flex flex-col justify-center items-center px-5 py-8
-        my-18"
-    >
+    <div className="w-full flex flex-col justify-center items-center px-5 py-8">
       <h1
         className="text-xl lg:text-4xl md:text-3xl sm:text-2xl text-center
           md:text-center sm:text-center font-bold
@@ -21,7 +18,7 @@ const ContactSection = () => {
         Let&apos;s connect
       </h1>
       <p
-        className="text-xs lg:text-xl md:text-md sm:text-sm
+        className="text-sm lg:text-lg md:text-md sm:text-sm
           text-muted-foreground text-center md:text-center sm:text-center
           font-light italic font-(family-name:--font-pontano-sans) py-0"
       >
