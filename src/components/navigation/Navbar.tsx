@@ -122,7 +122,7 @@ const Navbar = () => {
 
       {/* mobile menu items */}
       {isOpenMenu && (
-        <div className="md:hidden h-screen bg-zinc-50/90 dark:bg-zinc-900/90">
+        <div className="md:hidden h-screen">
           <ul className="flex flex-col p-8">
             <li className="flex flex-col">
               {linkItem.map((item) => (
