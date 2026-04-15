@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
       },
     },
   },
+
+  images: {
+    domains: ["hzvrqjeimamoazbzanhf.supabase.co"],
+  },
 };
 
 export default nextConfig;
