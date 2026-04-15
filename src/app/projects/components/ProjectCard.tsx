@@ -69,7 +69,9 @@ const ProjectCard = ({
         <CardDescription>
           <p className="py-2 text-muted-foreground italic">
             {monthYearStart} -{" "}
-            {endDate === "Present" || endDate === "" ? "Present" : monthYearEnd}
+            {endDate === "Present" || endDate === null
+              ? "Present"
+              : monthYearEnd}
           </p>
           <p className="text-wrap text-justify whitespace-normal">
             {projectDescription}
