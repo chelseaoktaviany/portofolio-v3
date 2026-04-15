@@ -17,8 +17,8 @@ export const projectsData = [
     title: "Personal Website",
     projectDescription:
       "An external project is to build a web application for personal includes about, experiences, skills, projects and contact. This project is done by myself as a Web Developer.",
-    demoLink: "https://chel-dev.netlify.app/",
     projectLink: "https://github.com/chelseaoktaviany/portfolio-chelsea",
+    demoLink: "https://chel-dev.netlify.app/",
     techStack: ["HTML", "CSS", "JS", "Bootstrap", "Netlify"],
     projectImage: "/images/projects/project3.png",
     startDate: "2022-05-01",
@@ -30,8 +30,8 @@ export const projectsData = [
     title: "Sushiku",
     projectDescription:
       "A project is to build a web application for restaurant including sign in,registration, food menu, and etc. This project is currently working in progress by myself as a Web Developer.",
-    demoLink: "#",
     projectLink: "https://github.com/chelseaoktaviany/sushiku",
+    demoLink: "#",
     techStack: [
       "HTML",
       "CSS",
