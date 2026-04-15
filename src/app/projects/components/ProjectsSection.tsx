@@ -1,19 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+// using supabase
+import { createClient } from "@/utils/supabase/client";
 
 // components
 import Btn from "@/components/button";
 import ProjectCard from "./ProjectCard";
 
-// data
-import { projectsData } from "@/data/ProjectData";
-
 const ProjectsSection = () => {
+  const [data, setData] = useState<any[]>([]);
   const [visible, setVisible] = useState(3);
+  const [loading, setLoading] = useState(true);
 
   const setMoreProjects = () => {
     setVisible((prev) => prev + 4);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const supabase = createClient();
+      const { data: projects } = await supabase.from("projects").select("*");
+
+      if (projects) {
+        setData(projects);
+      }
+
+      setLoading(false);
+
+      console.log(data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
@@ -26,27 +45,37 @@ const ProjectsSection = () => {
       </h1>
       {/*projects list */}
       <div
-        className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1
-          gap-6 justify-center items-center px-10"
+        className="px-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1
+          sm:grid-cols-1 gap-6 justify-center items-center"
       >
-        {projectsData.slice(0, visible).map((item) => (
-          <ProjectCard
-            key={item.id}
-            title={item.title}
-            projectDescription={item.projectDescription}
-            projectLink={item.projectLink}
-            demoLink={item.demoLink}
-            techStack={item.techStack}
-            projectImage={item.projectImage}
-            startDate={item.startDate}
-            endDate={item.endDate}
-          />
-        ))}
+        {loading ? (
+          <h2 className="flex justify-center items-center">
+            Loading projects…
+          </h2>
+        ) : data.length === 0 ? (
+          <h2 className="flex justify-center items-center">No data found.</h2>
+        ) : (
+          data
+            .slice(0, visible)
+            .map((item) => (
+              <ProjectCard
+                key={item.id}
+                title={item.title}
+                projectDescription={item.project_description}
+                projectLink={item.project_link}
+                demoLink={item.demo_link}
+                techStack={item.tech_stack}
+                projectImage={item.project_image}
+                startDate={item.start_date}
+                endDate={item.end_date}
+              />
+            ))
+        )}
       </div>
 
       {/* more projects button */}
       <div className="flex justify-center py-8 my-10">
-        {visible < projectsData.length && (
+        {visible < data.length && (
           <Btn variant="ghost" onClick={setMoreProjects}>
             More projects
           </Btn>
