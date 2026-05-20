@@ -61,6 +61,7 @@ const ProjectCard = ({
           className="relative z-20 aspect-video w-full object-cover
             brightness-60 dark:brightness-40 grayscale"
           src={projectImage || `/images/placeholder300x100.png`}
+          sizes="100%"
           alt={title}
         />
       </div>
@@ -69,7 +70,9 @@ const ProjectCard = ({
         <CardDescription>
           <p className="py-2 text-muted-foreground italic">
             {monthYearStart} -{" "}
-            {endDate === "Present" || endDate === "" ? "Present" : monthYearEnd}
+            {endDate === "Present" || endDate === null
+              ? "Present"
+              : monthYearEnd}
           </p>
           <p className="text-wrap text-justify whitespace-normal">
             {projectDescription}

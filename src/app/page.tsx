@@ -17,7 +17,7 @@ export default async function Home() {
 
       {/* about section */}
       <section
-        className="w-full lg:h-screen flex items-center bg-zinc-300
+        className="w-full lg:h-screen flex items-center bg-zinc-50
           dark:bg-zinc-950"
         id="about"
       >
