@@ -59,6 +59,7 @@ const AboutMeSection = () => {
           className="w-full h-full object-cover brightness-70"
           src="/images/avatar.jpg"
           alt="Chel's avatar"
+          sizes="100%"
           fill
         />
       </div>

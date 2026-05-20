@@ -61,6 +61,7 @@ const ProjectCard = ({
           className="relative z-20 aspect-video w-full object-cover
             brightness-60 dark:brightness-40 grayscale"
           src={projectImage || `/images/placeholder300x100.png`}
+          sizes="100%"
           alt={title}
         />
       </div>
