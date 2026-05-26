@@ -27,8 +27,6 @@ const ProjectsSection = () => {
       }
 
       setLoading(false);
-
-      console.log(data);
     };
 
     fetchData();
