@@ -20,13 +20,25 @@ const ProjectsSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       const supabase = createClient();
-      const { data: projects } = await supabase.from("projects").select("*");
 
-      if (projects) {
-        setData(projects);
+      try {
+        const { data: projects, error } = await supabase
+          .from("projects")
+          .select("*");
+
+        if (error) {
+          // eslint-disable-next-line no-console
+          console.error("Supabase fetch error (projects):", error);
+        }
+
+        setData(projects ?? []);
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error("Unexpected Supabase error (projects):", err);
+        setData([]);
+      } finally {
+        setLoading(false);
       }
-
-      setLoading(false);
     };
 
     fetchData();
